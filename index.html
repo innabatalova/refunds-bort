@@ -9,157 +9,198 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css.map" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <img src="image/header.png" alt="" class="header" />
+    <div class="header">
+      <img src="image/header.png" alt="" />
+    </div>
     <img src="image/brreadcrumbs.png" alt="" class="breadcrumb" />
 
     <section class="refunds">
-      <div class="container">
-        <div class="refunds-wrapper">
-          <div class="refunds-info">
-            <h2 class="refunds-info__title">Возврат товара</h2>
-            <p class="refunds-info__text">
-              В течение 7-ми дней можно вернуть даже использованный товар
-              купленный на сайте extego.ru, мы даём своим покупателям больше
-              прав и возможностей, чем закон о защите прав потребителя.
-            </p>
+      <div class="refunds-wrapper">
+        <div class="refunds-info">
+          <div class="container-fluid">
+            <div class="row">
+              <h2 class="refunds-info__title col-xxl-6 offset-xxl-1">
+                Возврат товара
+              </h2>
+            </div>
+            <div class="row">
+              <p class="refunds-info__text col-xxl-6 offset-xxl-1">
+                В течение 7-ми дней можно вернуть даже использованный товар
+                купленный на сайте extego.ru, мы даём своим покупателям больше
+                прав и возможностей, чем закон о защите прав потребителя.
+              </p>
+            </div>
           </div>
+        </div>
+        <div class="container-fluid">
           <div class="refunds-gide">
             <h2 class="refunds-gide__title">Как воспользоваться сервисом</h2>
-            <div class="refunds-gide__item">
-              <img
-                src="image/refunds-gide-img1.svg"
-                alt=""
-                class="refunds-gide__img"
-              />
-              <h4 class="refunds-gide__subtitle">Найдите свой заказ</h4>
-              <p class="refunds-gide__text">
-                Укажите трек номер выданный вам при отправлении, номер заказа
-                или, если вы авторизованы выберите заказ из списка
-              </p>
-              <span class="refunds-gide__info">
-                <img
-                  src="image/!!!-Icon.svg"
-                  alt="Icon info"
-                  class="refunds-gide__info__img"
-                />
-                <span class="refunds-gide__info__text">
-                  Трек номер находится на платежной квитанции выданной вам
-                  вместе с товаром
+            <div class="row">
+              <div class="refunds-gide__item col-xxl-3">
+                <div class="refunds-gide__wrap">
+                  <img
+                    src="image/refunds-gide-img1.svg"
+                    alt=""
+                    class="refunds-gide__img"
+                  />
+                  <div>
+                    <h4 class="refunds-gide__subtitle">Найдите свой заказ</h4>
+                    <p class="refunds-gide__text">
+                      Укажите трек номер выданный вам при отправлении, номер
+                      заказа или, если вы авторизованы выберите заказ из списка
+                    </p>
+                  </div>
+                </div>
+                <span class="refunds-gide__info">
+                  <img
+                    src="image/!!!-Icon.svg"
+                    alt="Icon info"
+                    class="refunds-gide__info__img"
+                  />
+                  <span class="refunds-gide__info__text">
+                    Трек номер находится на платежной квитанции выданной вам
+                    вместе с товаром
+                  </span>
                 </span>
-              </span>
-              <span class="refunds-gide__info">
-                <img
-                  src="image/!!!-Icon.svg"
-                  alt="Icon info"
-                  class="refunds-gide__info__img"
-                />
-                <span class="refunds-gide__info__text"
-                  >Номер заказа можно найти в СМС сообщении</span
-                >
-              </span>
-            </div>
-            <div class="refunds-gide__item">
-              <img
-                src="image/refunds-gide-img2.svg"
-                alt="refunds-gide__img"
-                class="refunds-gide__img"
-              />
+                <span class="refunds-gide__info">
+                  <img
+                    src="image/!!!-Icon.svg"
+                    alt="Icon info"
+                    class="refunds-gide__info__img"
+                  />
+                  <span class="refunds-gide__info__text"
+                    >Номер заказа можно найти в СМС сообщении</span
+                  >
+                </span>
+              </div>
+              <div class="refunds-gide__item col-xxl-3">
+                <div class="refunds-gide__wrap">
+                  <img
+                    src="image/refunds-gide-img2.svg"
+                    alt=""
+                    class="refunds-gide__img"
+                  />
+                  <div>
+                    <h4 class="refunds-gide__subtitle">Подтвердите личность</h4>
+                    <p class="refunds-gide__text">
+                      Если Вы не авторизованы на сайте, то для вашей
+                      идентификации нам потребуется вас идентифицировать
+                    </p>
+                  </div>
+                </div>
+                <span class="refunds-gide__info">
+                  <img
+                    src="image/!!!-Icon.svg"
+                    alt="Icon info"
+                    class="refunds-gide__info__img"
+                  />
+                  <span class="refunds-gide__info__text"
+                    >Также вы можете авторизоваться по почте</span
+                  >
+                </span>
+              </div>
+              <div class="refunds-gide__item col-xxl-3">
+                <div class="refunds-gide__wrap">
+                  <img
+                    src="image/refunds-gide-img3.svg"
+                    alt=""
+                    class="refunds-gide__img"
+                  />
+                  <div>
+                    <h4 class="refunds-gide__subtitle">
+                      Выберите товары для возврата
+                    </h4>
+                    <p class="refunds-gide__text">
+                      Можно выбрать позиции и их количество
+                    </p>
+                  </div>
+                </div>
+                <span class="refunds-gide__info">
+                  <img
+                    src="image/!!!-Icon.svg"
+                    alt="Icon info"
+                    class="refunds-gide__info__img"
+                  />
+                  <span class="refunds-gide__info__text"
+                    >Стоимость за возврат товара рассчитывается по тарифам почты
+                    России</span
+                  >
+                </span>
+              </div>
 
-              <h4 class="refunds-gide__subtitle">Подтвердите личность</h4>
-              <p class="refunds-gide__text">
-                Если Вы не авторизованы на сайте, то для вашей идентификации нам
-                потребуется вас идентифицировать
-              </p>
-              <span class="refunds-gide__info">
-                <img
-                  src="image/!!!-Icon.svg"
-                  alt="Icon info"
-                  class="refunds-gide__info__img"
-                />
-                <span class="refunds-gide__info__text"
-                  >Также вы можете авторизоваться по почте</span
-                >
-              </span>
-            </div>
-            <div class="refunds-gide__item">
-              <img
-                src="image/refunds-gide-img3.svg"
-                alt="refunds-gide__img"
-                class="refunds-gide__img"
-              />
-              <h4 class="refunds-gide__subtitle">
-                Выберите товары для возврата
-              </h4>
-              <p class="refunds-gide__text">
-                Можно выбрать позиции и их количество
-              </p>
-              <span class="refunds-gide__info">
-                <img
-                  src="image/!!!-Icon.svg"
-                  alt="Icon info"
-                  class="refunds-gide__info__img"
-                />
-                <span class="refunds-gide__info__text"
-                  >Стоимость за возврат товара рассчитывается по тарифам почты
-                  России</span
-                >
-              </span>
-            </div>
-            <div class="refunds-gide__item">
-              <img
-                src="image/refunds-gide-img4.svg"
-                alt="refunds-gide__img"
-                class="refunds-gide__info__img"
-              />
-              <h4 class="refunds-gide__subtitle">
-                Получите трек номер для отправления
-              </h4>
-              <p class="refunds-gide__text">
-                Номер понадобится назвать в отделении почты России
-              </p>
-              <span class="refunds-gide__info">
-                <img
-                  src="image/!!!-Icon.svg"
-                  alt="Icon info"
-                  class="refunds-gide__info__img"
-                />
-                <span class="refunds-gide__info__text"
-                  >Стоимость отправления товара - бесплатно</span
-                >
-              </span>
-              <span class="refunds-gide__info">
-                <img
-                  src="image/!!!-Icon.svg"
-                  alt="Icon info"
-                  class="refunds-gide__info__img"
-                />
-                <span class="refunds-gide__info__text"
-                  >Максимальный вес отправления 20кг</span
-                >
-              </span>
+              <div class="refunds-gide__item col-xxl-3">
+                <div class="refunds-gide__wrap">
+                  <img
+                    src="image/refunds-gide-img4.svg"
+                    alt=""
+                    class="refunds-gide__img"
+                  />
+                  <div>
+                    <h4 class="refunds-gide__subtitle">
+                      Получите трек номер для отправления
+                    </h4>
+                    <p class="refunds-gide__text">
+                      Номер понадобится назвать в отделении почты России
+                    </p>
+                  </div>
+                </div>
+                <span class="refunds-gide__info">
+                  <img
+                    src="image/!!!-Icon.svg"
+                    alt="Icon info"
+                    class="refunds-gide__info__img"
+                  />
+                  <span class="refunds-gide__info__text">
+                    Стоимость отправления товара - бесплатно
+                  </span>
+                </span>
+                <span class="refunds-gide__info">
+                  <img
+                    src="image/!!!-Icon.svg"
+                    alt="Icon info"
+                    class="refunds-gide__info__img"
+                  />
+                  <span class="refunds-gide__info__text"
+                    >Максимальный вес отправления 20кг</span
+                  >
+                </span>
+              </div>
             </div>
           </div>
-          <div class="refunds-search">
-            <h3 class="refunds-search__title">Найдите свой заказ</h3>
-            <div class="refunds-search__form">
-              <span class="refunds-search__fieldname"
-                >Введите номер заказа или трек-номер отправления</span
-              >
-              <input type="text" class="refunds-search__field" />
-              <button type="submit" class="refunds-search__button">
-                Найти
-              </button>
+        </div>
+        <div class="refunds-search">
+          <div class="container-fluid">
+            <div class="row">
+              <h2 class="refunds-search__title col-xxl-6 offset-xxl-1">
+                Найдите свой заказ
+              </h2>
+            </div>
+
+            <div class="row">
+              <div class="refunds-search__form col-xxl-6 offset-xxl-1">
+                <span class="refunds-search__fieldname"
+                  >Введите номер заказа или трек-номер отправления</span
+                >
+                <input type="text" class="refunds-search__field" />
+                <button type="submit" class="refunds-search__button">
+                  Найти
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- /.container -->
     </section>
     <!-- /.refunds -->
 
-    <img src="image/footer.png" alt="" class="footer" />
+    <div class="footer">
+      <img src="image/footer.png" alt="" />
+    </div>
   </body>
 </html>

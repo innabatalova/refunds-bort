@@ -3,15 +3,154 @@
 }
 
 .header, .footer, .breadcrumb {
-  width: 100%;
+  max-width: 1180px;
+  min-width: 280px;
+  margin: auto;
 }
 
 .header {
   margin-bottom: 30px;
 }
 
-.container {
-  max-width: 95rem;
-  margin: auto;
+.container-fluid {
+  max-width: 1180px;
+  min-width: 280px;
+  margin: 0 auto;
+}
+
+.refunds {
+  font-family: Roboto;
+}
+
+.refunds-info {
+  background-color: #0084B4;
+  padding-top: 35px;
+  padding-bottom: 45px;
+}
+
+.refunds-info__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 45px;
+}
+
+.refunds-info__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.refunds-gide {
+  padding: 50px 0;
+}
+
+.refunds-gide__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.refunds-gide__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.refunds-gide__wrap {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.refunds-gide__img {
+  max-width: 90px;
+  max-height: 90px;
+  margin-right: 10px;
+}
+
+.refunds-gide__subtitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 5px;
+}
+
+.refunds-gide__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.refunds-gide__info {
+  display: flex;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 11px;
+  color: rgba(0, 0, 0, 0.38);
+  margin-bottom: 5px;
+}
+
+.refunds-gide__info__img {
+  max-width: 10px;
+  max-height: 10px;
+  margin-right: 10px;
+}
+
+.refunds-search {
+  background-color: #0084B4;
+  padding: 35px 0;
+}
+
+.refunds-search__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.refunds-search__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.refunds-search__fieldname {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.refunds-search__field {
+  max-width: 300px;
+  height: 35px;
+  margin-bottom: 45px;
+}
+
+.refunds-search__button {
+  max-width: 125px;
+  height: 35px;
+  padding: 7px 41.5px;
+  border: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 3px;
+  background-color: #525558;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */
