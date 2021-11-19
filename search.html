@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Безусловный возврат</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css.map" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="image/header.png" alt="" />
+    </div>
+    <img src="image/brreadcrumbs.png" alt="" class="breadcrumb" />
+
+    <div class="refunds-autorization refunds-autorization-mail">
+      <div class="container-fluid">
+        <h1 class="refunds-autorization__title">
+          Заказ <span>№80087664176230</span> найден!
+        </h1>
+        <span class="refunds-autorization__subtitle"
+          >Мы отправили вам СМС с кодом на номер телефона для подтверждения
+          владельца аккаунта</span
+        >
+        <div class="refunds-autorization__input__wrapper">
+          <label class="refunds-autorization__input__name">Код из СМС</label>
+          <input type="text" class="refunds-autorization__input__field" />
+        </div>
+        <a class="refunds-autorization__link">Подтвердить личность по почте</a>
+        <div>
+          <button class="refunds-autorization__button">Войти</button>
+        </div>
+      </div>
+    </div>
+    <div class="refunds-autorization refunds-autorization-phone">
+      <div class="container-fluid">
+        <h1 class="refunds-autorization__title">
+          Заказ <span>№80087664176230</span> найден!
+        </h1>
+        <span class="refunds-autorization__subtitle"
+          >Авторизуйтесь от пользователя оформившего заказ</span
+        >
+
+        <div class="row">
+          <div class="refunds-autorization__input__wrapper col-3">
+            <label class="refunds-autorization__input__name">E-mail</label>
+            <input type="text" class="refunds-autorization__input__field" />
+          </div>
+          <div class="refunds-autorization__input__wrapper col-3">
+            <label class="refunds-autorization__input__name">Пароль</label>
+            <input type="text" class="refunds-autorization__input__field" />
+          </div>
+        </div>
+
+        <a class="refunds-autorization__link"
+          >Подтвердить личность по номеру телефона</a
+        >
+        <div>
+          <button class="refunds-autorization__button">Войти</button>
+        </div>
+      </div>
+    </div>
+    <div class="refunds-autorization refunds-autorization-refusal">
+      <div class="container-fluid">
+        <h1 class="refunds-autorization__title">
+          Заказ не найден или недоступен для возврата
+        </h1>
+        <span class="refunds-autorization__subtitle"
+          >Укажите данные вручную, мы найдем заказ и перезвоним вам</span
+        >
+        <div class="refunds-autorization__input__wrapper">
+          <label class="refunds-autorization__input__name">Номер заказа</label>
+          <input type="text" class="refunds-autorization__input__field" />
+        </div>
+        <div class="refunds-autorization__input__wrapper">
+          <label class="refunds-autorization__input__name"
+            >Причина возврата (в свободной форме)</label
+          >
+
+          <textarea
+            cols="30"
+            rows="10"
+            class="refunds-autorization__input__textarea"
+          ></textarea>
+        </div>
+        <div class="refunds-autorization__input__wrapper">
+          <label class="refunds-autorization__input__name"
+            >Телефон для обратной связи</label
+          >
+          <input type="text" class="refunds-autorization__input__field" />
+        </div>
+        <div>
+          <button class="refunds-autorization__button">Отправить</button>
+        </div>
+      </div>
+    </div>
+    <div class="loading">
+      <img src="image/loading.svg" alt="loading" />
+    </div>
+
+    <div class="footer">
+      <img src="image/footer.png" alt="" />
+    </div>
+  </body>
+</html>

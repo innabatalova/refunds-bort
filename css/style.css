@@ -6,6 +6,10 @@ a {
   text-decoration: none;
 }
 
+input {
+  outline: none;
+}
+
 .header, .footer, .breadcrumb {
   max-width: 1180px;
   min-width: 280px;
@@ -20,6 +24,27 @@ a {
   max-width: 1180px;
   min-width: 280px;
   margin: 0 auto;
+}
+
+.loading {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(0, 132, 180, 0.95);
+  padding: 80px 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: rotate 1.7s linear infinite;
 }
 
 .refunds {
@@ -430,5 +455,93 @@ a {
 
 .info__table__check {
   width: 30px;
+}
+
+.refunds-autorization {
+  font-family: Roboto;
+  background-color: #0084B4;
+  color: #FFF;
+  padding: 35px 0;
+  margin-bottom: 40px;
+}
+
+.refunds-autorization__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.refunds-autorization__subtitle {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 25px;
+}
+
+.refunds-autorization__link {
+  display: inline-block;
+  text-decoration: underline;
+  color: #FFF;
+  opacity: 0.5;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.refunds-autorization__link:hover, .refunds-autorization__link:focus {
+  color: #FFF;
+  opacity: 0.75;
+}
+
+.refunds-autorization__input__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.refunds-autorization__input__name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+
+.refunds-autorization__input__field {
+  height: 35px;
+  max-width: 210px;
+}
+
+.refunds-autorization__input__textarea {
+  height: 85px;
+  resize: none;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.refunds-autorization__button {
+  margin-top: 25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #525558;
+  border: none;
+  border-radius: 3px;
+  color: #FFF;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 125px;
+}
+
+.refunds-autorization__button:hover, .refunds-autorization__button:focus {
+  color: #a09898;
 }
 /*# sourceMappingURL=style.css.map */
