@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header, .footer, .breadcrumb {
   max-width: 1180px;
   min-width: 280px;
@@ -221,6 +225,169 @@
   font-size: 12px;
   line-height: 14px;
   color: #0D91F0;
-  text-decoration: none;
+}
+
+.data-user {
+  font-family: Roboto;
+  background-color: #0084B4;
+  color: #FFF;
+  padding: 35px 0;
+}
+
+.data-user__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.data-user__info {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 30px;
+}
+
+.data-user__wrapper {
+  margin-bottom: 30px;
+}
+
+.data-user__subtitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 20px;
+}
+
+.data-user__input__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.data-user__input__name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+
+.data-user__input__label {
+  position: relative;
+}
+
+.data-user__input__label::after {
+  content: "__ __ .__ __ .__ __ __ __";
+  position: absolute;
+  color: gray;
+  bottom: -35px;
+  left: 25%;
+}
+
+.data-user__input__field {
+  height: 35px;
+}
+
+.data-user__input__field__date {
+  padding-left: 25%;
+  background-image: url(../image/clock-icon.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 50%;
+  color: transparent;
+}
+
+.data-user__table__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+
+.data-user__cause {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 20px;
+}
+
+.data-user__comment {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 60px;
+}
+
+.data-user__checkbox {
+  margin-bottom: 10px;
+}
+
+.data-user__checkbox__label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 10px;
+}
+
+.data-user__print {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.data-user__print__button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 3px;
+  border: none;
+  background-color: #525558;
+  color: #FFF;
+  padding: 7px 38.5px;
+}
+
+.data-user__print__span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.data-user__print__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFF;
+}
+
+.data-user__print__link:hover, .data-user__print__link:focus {
+  color: #525558;
+}
+
+.table {
+  border: 1px solid #FFF;
+  margin-bottom: 20px;
+}
+
+.table-name, .table-item {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFF;
+  border: 1px solid #FFF;
+  min-width: 65px;
 }
 /*# sourceMappingURL=style.css.map */

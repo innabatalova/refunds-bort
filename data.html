@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Безусловный возврат</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css.map" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="data-user">
+      <div class="container-fluid">
+        <h1 class="data-user__title">Заполните анкету на возврат товара</h1>
+        <span class="data-user__info"
+          >После заполнения, анкету необходимо распечать, подписать и приложить
+          к форме</span
+        >
+        <div class="row">
+          <div class="data-user__wrapper col-xxl-6">
+            <h3 class="data-user__subtitle">Паспортные данные</h3>
+            <div class="row">
+              <div class="data-user__input__wrapper col-5">
+                <label class="data-user__input__name">Серия</label>
+                <input type="text" class="data-user__input__field" />
+              </div>
+              <div class="data-user__input__wrapper col-5 offset-xxl-2">
+                <label class="data-user__input__name">Номер</label>
+                <input type="text" class="data-user__input__field" />
+              </div>
+              <div class="data-user__input__wrapper col-5">
+                <label class="data-user__input__name data-user__input__label"
+                  >Дата выдачи</label
+                >
+                <input
+                  type="date"
+                  class="data-user__input__field data-user__input__field__date"
+                />
+              </div>
+              <div class="data-user__input__wrapper col-12">
+                <label class="data-user__input__name">Кем выдан</label>
+                <input type="text" class="data-user__input__field" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="data-user__wrapper col-xxl-6">
+            <h3 class="data-user__subtitle">Личная информация</h3>
+            <div class="row">
+              <div class="data-user__input__wrapper col-5">
+                <label class="data-user__input__name">ФИО</label>
+                <input type="text" class="data-user__input__field" />
+              </div>
+
+              <div class="data-user__input__wrapper col-5 offset-xxl-2">
+                <label class="data-user__input__name data-user__input__label"
+                  >Дата покупки</label
+                >
+                <input
+                  type="date"
+                  class="data-user__input__field data-user__input__field__date"
+                />
+              </div>
+              <div class="data-user__input__wrapper">
+                <label class="data-user__input__name">Адрес</label>
+                <input type="text" class="data-user__input__field" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="data-user__wrapper col-xxl-6">
+            <h3 class="data-user__subtitle">Платежная информация</h3>
+            <div class="row">
+              <div class="data-user__input__wrapper col-10">
+                <label class="data-user__input__name"
+                  >Банк (наименование)</label
+                >
+                <input type="text" class="data-user__input__field" />
+              </div>
+              <div class="data-user__input__wrapper col-10">
+                <label class="data-user__input__name">БИК</label>
+                <input type="text" class="data-user__input__field" />
+              </div>
+              <div class="data-user__input__wrapper col-10">
+                <label class="data-user__input__name">Корр. счет</label>
+                <input type="text" class="data-user__input__field" />
+              </div>
+              <div class="data-user__input__wrapper col-10">
+                <label class="data-user__input__name">№ Лицевого счета</label>
+                <input type="text" class="data-user__input__field" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h3 class="data-user__subtitle">Информация о возврате</h3>
+          <span class="data-user__table__title">
+            Товары к возврату или обмену
+          </span>
+          <div class="row">
+            <div class="col-6">
+              <table class="table">
+                <tr>
+                  <th class="table-name">Товар</th>
+                  <th class="table-name">Цена</th>
+                  <th class="table-name">Кол-во</th>
+                </tr>
+                <tr>
+                  <td class="table-item">
+                    Копье для мойки высокого давления BORT BHL-TURBO (Струйная
+                    трубка; Грязевая фреза)
+                  </td>
+                  <td class="table-item">18 390 Р</td>
+                  <td class="table-item">1</td>
+                </tr>
+              </table>
+            </div>
+            <p class="data-user__cause">Причина: Поломка товара</p>
+            <div class="row">
+              <p class="data-user__comment col-6">
+                Комментарий: Беспокоит постоянный запах из мусорного ведра и
+                раковины. В ваше отсутствие на мусорное ведро «покушаются»
+                домашние питомцы, и вы не можете никак их от этого отучить? В
+                вашей квартире стали появляться усатые соседи? Пришло время
+                установить диспоузер! Впрочем, даже если вы не столкнулись с
+                перечисленными выше проблемами, использование кухонного
+                измельчителя пищевых отходов – это очень удобно.
+              </p>
+            </div>
+
+            <div class="data-user__checkbox">
+              <input type="checkbox" id="check" />
+              <label class="data-user__checkbox__label" for="check"
+                >Я даю согласие на обработку персональных данных</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="data-user__print col-5">
+            <button class="data-user__print__button">Печать</button>
+            <span type="file" class="data-user__print__span">или</span>
+            <div class="data-user__print__linker">
+              <img src="image/print-icon.svg" alt="print-icon" />
+              <a href="#" class="data-user__print__link"
+                >Распечатать и заполнить вручную</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.data-user -->
+  </body>
+</html>
