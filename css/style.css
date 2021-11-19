@@ -376,12 +376,12 @@ a {
   color: #525558;
 }
 
-.table {
+.data-user__table {
   border: 1px solid #FFF;
   margin-bottom: 20px;
 }
 
-.table-name, .table-item {
+.data-user__table__name, .data-user__table__item {
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -389,5 +389,46 @@ a {
   color: #FFF;
   border: 1px solid #FFF;
   min-width: 65px;
+}
+
+.info-order {
+  font-family: Roboto;
+  background-color: #0084B4;
+  color: #FFF;
+  padding: 35px 0;
+}
+
+.info__title, .info__number {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.info__table {
+  margin-top: 30px;
+}
+
+.info__table__name {
+  height: 45px;
+  border: 1px solid #A2A2A2;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.info__table__item {
+  height: 45px;
+  border: 1px solid #A2A2A2;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.info__table__check {
+  width: 30px;
 }
 /*# sourceMappingURL=style.css.map */
