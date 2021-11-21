@@ -523,11 +523,13 @@ input {
 }
 
 .refunds-autorization__input__textarea {
-  height: 85px;
   resize: none;
   width: 50%;
-  margin-top: 20px;
   margin-bottom: 25px;
+}
+
+.refunds-autorization__textarea__name {
+  margin-top: 20px;
 }
 
 .refunds-autorization__button {
@@ -547,5 +549,81 @@ input {
 
 .refunds-autorization__button:hover, .refunds-autorization__button:focus {
   color: #a09898;
+}
+
+.product-selection {
+  font-family: Roboto;
+  background-color: #CCCCCC;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  margin-bottom: 40px;
+}
+
+.product-selection__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.product-selection__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 20px;
+}
+
+.product-selection__table {
+  border: 1px solid #A2A2A2;
+  margin-bottom: 30px;
+}
+
+.product-selection__table__name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  border: 1px solid #A2A2A2;
+}
+
+.product-selection__table__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  border: 1px solid #A2A2A2;
+}
+
+.product-selection__comment__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-selection__comment__name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 7px;
+}
+
+.product-selection__comment__field {
+  resize: none;
+}
+
+.product-selection__button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 35px;
+  max-width: 125px;
+  background-color: #525558;
+  color: #FFF;
+  border-radius: 3px;
+  border: none;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
