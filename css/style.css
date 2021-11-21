@@ -474,6 +474,10 @@ input {
   margin-bottom: 5px;
 }
 
+.refunds-autorization__search__title {
+  margin-bottom: 40px;
+}
+
 .refunds-autorization__subtitle {
   display: inline-block;
   font-style: normal;
