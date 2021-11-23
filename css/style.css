@@ -382,6 +382,10 @@ input {
   padding: 7px 38.5px;
 }
 
+.data-user__print__button:hover, .data-user__print__button:focus {
+  color: #a09898;
+}
+
 .data-user__print__span {
   font-style: normal;
   font-weight: 500;
@@ -625,5 +629,9 @@ input {
   border-radius: 3px;
   border: none;
   margin-top: 20px;
+}
+
+.product-selection__button:hover, .product-selection__button:focus {
+  color: #a09898;
 }
 /*# sourceMappingURL=style.css.map */
