@@ -28,11 +28,19 @@
             <div class="row">
               <div class="data-user__input__wrapper col-5">
                 <label class="data-user__input__name">Серия</label>
-                <input type="text" class="data-user__input__field" />
+                <input
+                  type="text"
+                  class="data-user__input__field"
+                  id="series"
+                />
               </div>
               <div class="data-user__input__wrapper col-5 offset-xxl-2">
                 <label class="data-user__input__name">Номер</label>
-                <input type="text" class="data-user__input__field" />
+                <input
+                  type="text"
+                  class="data-user__input__field"
+                  id="number"
+                />
               </div>
               <div class="data-user__input__wrapper col-5">
                 <label class="data-user__input__name data-user__input__label"
@@ -89,11 +97,11 @@
               </div>
               <div class="data-user__input__wrapper col-10">
                 <label class="data-user__input__name">БИК</label>
-                <input type="text" class="data-user__input__field" />
+                <input type="text" class="data-user__input__field" id="BIK" />
               </div>
               <div class="data-user__input__wrapper col-10">
                 <label class="data-user__input__name">Корр. счет</label>
-                <input type="text" class="data-user__input__field" />
+                <input type="text" class="data-user__input__field" id="corr" />
               </div>
               <div class="data-user__input__wrapper col-10">
                 <label class="data-user__input__name">№ Лицевого счета</label>
@@ -161,5 +169,9 @@
       </div>
     </section>
     <!-- /.data-user -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
