@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Безусловный возврат</title>
+    <title>Поиск товара</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
@@ -45,7 +45,7 @@
                 <td class="product-selection__table__item">18 390 Р</td>
                 <td class="product-selection__table__item">
                   <select name="product-selection__table__select">
-                    <option value="1">1</option>
+                    <option value="1" selected>1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -55,10 +55,10 @@
                 </td>
                 <td class="product-selection__table__item">
                   <select name="product-selection__table__select">
-                    <option value="1">Выберите причину</option>
+                    <option value="1" selected>Выберите причину</option>
                     <option value="2">Первая причина</option>
-                    <option value="4">это ложь</option>
-                    <option value="3">Кто прав кто виноват</option>
+                    <option value="3">это ложь</option>
+                    <option value="4">Кто прав кто виноват</option>
                     <option value="5">не разберешь</option>
                   </select>
                 </td>
@@ -74,7 +74,7 @@
                 <td class="product-selection__table__item">18 390 Р</td>
                 <td class="product-selection__table__item">
                   <select name="product-selection__table__select">
-                    <option value="1">1</option>
+                    <option value="1" selected>1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -84,7 +84,7 @@
                 </td>
                 <td class="product-selection__table__item">
                   <select name="product-selection__table__select">
-                    <option value="1">Выберите причину</option>
+                    <option value="1" selected>Выберите причину</option>
                     <option value="2">Первая причина</option>
                     <option value="4">это ложь</option>
                     <option value="3">Кто прав кто виноват</option>
@@ -97,7 +97,7 @@
         </div>
         <div class="row">
           <div class="col-6">
-            <div class="product-selection__comment__wrapper">
+            <form class="product-selection__comment__wrapper">
               <label class="product-selection__comment__name"
                 >Оставьте комментарий</label
               >
@@ -105,11 +105,12 @@
                 cols="30"
                 rows="4"
                 class="product-selection__comment__field"
+                required
               ></textarea>
-            </div>
-          </div>
-          <div>
-            <button class="product-selection__button">Вернуть</button>
+              <button type="submit" class="product-selection__button">
+                Вернуть
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -126,16 +127,19 @@
           Найдите свой заказ
         </h1>
 
-        <div class="refunds-autorization__input__wrapper">
+        <form class="refunds-autorization__input__wrapper">
           <label class="refunds-autorization__input__name"
             >Введите номер заказа или трек-номер отправления</label
           >
-          <input type="text" class="refunds-autorization__input__field" />
-        </div>
-
-        <div>
-          <button class="refunds-autorization__button">Найти</button>
-        </div>
+          <input
+            type="text"
+            class="refunds-autorization__input__field"
+            required
+          />
+          <button type="submit" class="refunds-autorization__button">
+            Найти
+          </button>
+        </form>
       </div>
     </div>
 
@@ -148,14 +152,20 @@
           >Мы отправили вам СМС с кодом на номер телефона для подтверждения
           владельца аккаунта</span
         >
-        <div class="refunds-autorization__input__wrapper">
+        <form class="refunds-autorization__input__wrapper">
           <label class="refunds-autorization__input__name">Код из СМС</label>
-          <input type="text" class="refunds-autorization__input__field" />
-        </div>
-        <a class="refunds-autorization__link">Подтвердить личность по почте</a>
-        <div>
-          <button class="refunds-autorization__button">Войти</button>
-        </div>
+          <input
+            type="text"
+            class="refunds-autorization__input__field"
+            required
+          />
+          <a class="refunds-autorization__link"
+            >Подтвердить личность по почте</a
+          >
+          <button type="submit" class="refunds-autorization__button">
+            Войти
+          </button>
+        </form>
       </div>
     </div>
     <div class="refunds-autorization refunds-autorization-phone">
@@ -167,23 +177,38 @@
           >Авторизуйтесь от пользователя оформившего заказ</span
         >
 
-        <div class="row">
-          <div class="refunds-autorization__input__wrapper col-3">
-            <label class="refunds-autorization__input__name">E-mail</label>
-            <input type="text" class="refunds-autorization__input__field" />
+        <form class="row">
+          <div class="col-6 row">
+            <div class="refunds-autorization__input__wrapper col-6">
+              <label class="refunds-autorization__input__name">E-mail</label>
+              <input
+                type="text"
+                class="refunds-autorization__input__field"
+                id="email"
+                required
+              />
+            </div>
+            <div class="refunds-autorization__input__wrapper col-6">
+              <label class="refunds-autorization__input__name">Пароль</label>
+              <input
+                type="text"
+                class="refunds-autorization__input__field"
+                required
+              />
+            </div>
           </div>
-          <div class="refunds-autorization__input__wrapper col-3">
-            <label class="refunds-autorization__input__name">Пароль</label>
-            <input type="text" class="refunds-autorization__input__field" />
-          </div>
-        </div>
-
-        <a class="refunds-autorization__link"
-          >Подтвердить личность по номеру телефона</a
-        >
-        <div>
-          <button class="refunds-autorization__button">Войти</button>
-        </div>
+          <a class="refunds-autorization__link"
+            >Подтвердить личность по номеру телефона</a
+          >
+          <button
+            type="submit"
+            class="
+              refunds-autorization__button refunds-autorization__button__email
+            "
+          >
+            Войти
+          </button>
+        </form>
       </div>
     </div>
     <div class="refunds-autorization refunds-autorization-refusal">
@@ -194,34 +219,48 @@
         <span class="refunds-autorization__subtitle"
           >Укажите данные вручную, мы найдем заказ и перезвоним вам</span
         >
-        <div class="refunds-autorization__input__wrapper">
-          <label class="refunds-autorization__input__name">Номер заказа</label>
-          <input type="text" class="refunds-autorization__input__field" />
-        </div>
-        <div class="refunds-autorization__input__wrapper">
-          <label
-            class="
-              refunds-autorization__input__name
-              refunds-autorization__textarea__name
-            "
-            >Причина возврата (в свободной форме)</label
-          >
+        <form>
+          <div class="refunds-autorization__input__wrapper">
+            <label class="refunds-autorization__input__name"
+              >Номер заказа</label
+            >
+            <input
+              type="text"
+              class="refunds-autorization__input__field"
+              required
+            />
+          </div>
+          <div class="refunds-autorization__input__wrapper">
+            <label
+              class="
+                refunds-autorization__input__name
+                refunds-autorization__textarea__name
+              "
+              >Причина возврата (в свободной форме)</label
+            >
 
-          <textarea
-            cols="15"
-            rows="4"
-            class="refunds-autorization__input__textarea"
-          ></textarea>
-        </div>
-        <div class="refunds-autorization__input__wrapper">
-          <label class="refunds-autorization__input__name"
-            >Телефон для обратной связи</label
-          >
-          <input type="text" class="refunds-autorization__input__field" />
-        </div>
-        <div>
-          <button class="refunds-autorization__button">Отправить</button>
-        </div>
+            <textarea
+              cols="15"
+              rows="4"
+              class="refunds-autorization__input__textarea"
+              required
+            ></textarea>
+          </div>
+          <div class="refunds-autorization__input__wrapper">
+            <label class="refunds-autorization__input__name"
+              >Телефон для обратной связи</label
+            >
+            <input
+              type="text"
+              class="refunds-autorization__input__field"
+              id="phone"
+              required
+            />
+          </div>
+          <button type="submit" class="refunds-autorization__button">
+            Отправить
+          </button>
+        </form>
       </div>
     </div>
     <div class="loading">
@@ -232,4 +271,8 @@
       <img src="image/footer.png" alt="" />
     </div>
   </body>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/main.js"></script>
 </html>

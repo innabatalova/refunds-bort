@@ -4,6 +4,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 input {
@@ -303,29 +304,13 @@ input {
   margin-bottom: 5px;
 }
 
-.data-user__input__label {
-  position: relative;
-}
-
-.data-user__input__label::after {
-  content: "__ __ .__ __ .__ __ __ __";
-  position: absolute;
-  color: gray;
-  bottom: -35px;
-  left: 25%;
-}
-
 .data-user__input__field {
   height: 35px;
 }
 
 .data-user__input__field__date {
-  padding-left: 25%;
-  background-image: url(../image/clock-icon.svg);
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: 50%;
-  color: transparent;
+  padding-left: 55px;
+  padding-right: 25px;
 }
 
 .data-user__table__title {
@@ -524,6 +509,7 @@ input {
 .refunds-autorization__input__field {
   height: 35px;
   max-width: 210px;
+  margin-bottom: 5px;
 }
 
 .refunds-autorization__input__textarea {
@@ -549,6 +535,10 @@ input {
   padding-top: 7px;
   padding-bottom: 7px;
   width: 125px;
+}
+
+.refunds-autorization__button__email {
+  margin-left: 12px;
 }
 
 .refunds-autorization__button:hover, .refunds-autorization__button:focus {
@@ -615,6 +605,7 @@ input {
 
 .product-selection__comment__field {
   resize: none;
+  outline: none;
 }
 
 .product-selection__button {
