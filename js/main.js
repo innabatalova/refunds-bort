@@ -1,15 +1,4 @@
 $(document).ready(function () {
-  //маска для проверки ввода номера
-
-  // $(".data-user__input__field").mask("+7 (900) 000 00 00", (minlength = 10));+
-  //задаете x как любое число
-  // $.mask.definitions["x"] = "[0-9]";
-
-  // //устанавливаете саму маску и * вместо подчеркивания
-  // $("id").mask("4276-xxxx-xx98-7654", { placeholder: "*" });
-
-  // $.mask.definitions["h"] = "[0-9]";
-
   //плагин фиксации курсора в начале поля
   $.fn.setCursorPosition = function (pos) {
     if ($(this).get(0).setSelectionRange) {
@@ -36,13 +25,6 @@ $(document).ready(function () {
       $(this).setCursorPosition(0);
     })
     .mask("99 99 99", { autoclear: false, placeholder: "*" });
-
-  //маска ввода даты выдачи паспорта
-  $("#data")
-    .click(function () {
-      $(this).setCursorPosition(0);
-    })
-    .mask("99 99 9999", { autoclear: false });
 
   //маска ввода БИК
   $("#BIK")
@@ -71,4 +53,35 @@ $(document).ready(function () {
       $(this).setCursorPosition(0);
     })
     .mask("+7 (999) 999 99 99", { autoclear: false, placeholder: "-" });
+
+  //сохрание черновика ввода форм
+  const seriesInput = document.getElementById("series");
+  const numberInput = document.getElementById("number"); //записать игнорирование звездочек
+  const dataInput = document.getElementById("data");
+  const issuedInput = document.getElementById("issued");
+  const fullnameInput = document.getElementById("fullname");
+  const buydataInput = document.getElementById("buydata");
+  const addressInput = document.getElementById("address");
+  const bankInput = document.getElementById("bank");
+  const BIKInput = document.getElementById("BIK");
+  const corrInput = document.getElementById("corr");
+  const personInput = document.getElementById("person");
+
+  $(document).on("change click keyup", () => {
+    const draft = {
+      series: seriesInput.value,
+      number: numberInput.value,
+      data: dataInput.value,
+      issued: issuedInput.value,
+      fullname: fullnameInput.value,
+      buydata: buydataInput.value,
+      address: addressInput.value,
+      bank: bankInput.value,
+      BIK: BIKInput.value,
+      corr: corrInput.value,
+      person: personInput.value,
+    };
+
+    console.log(draft);
+  });
 });
