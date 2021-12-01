@@ -56,7 +56,7 @@ $(document).ready(function () {
 
   //сохрание черновика ввода форм
   const seriesInput = document.getElementById("series");
-  const numberInput = document.getElementById("number"); //записать игнорирование звездочек
+  const numberInput = document.getElementById("number");
   const dataInput = document.getElementById("data");
   const issuedInput = document.getElementById("issued");
   const fullnameInput = document.getElementById("fullname");
@@ -66,6 +66,7 @@ $(document).ready(function () {
   const BIKInput = document.getElementById("BIK");
   const corrInput = document.getElementById("corr");
   const personInput = document.getElementById("person");
+  const draftOverlayLink = $(".draft-overlay__link");
 
   $(document).on("change click keyup", () => {
     const draft = {
@@ -82,6 +83,42 @@ $(document).ready(function () {
       person: personInput.value,
     };
 
-    console.log(draft);
+    localStorage.setItem("draft", JSON.stringify(draft)); //сохранение данных в локальном хранилище браузера
+  });
+
+  // const fillDraft = (draft) => {
+  //   localStorage.getItem("draft", JSON.parse(draft));
+  //   seriesInput.textContent = "draft.series";
+  //   console.log("testing");
+  // };
+
+  // fillDraft();
+
+  if (localStorage.getItem("draft")) {
+    const drafter = JSON.parse(localStorage.getItem("draft"));
+
+    seriesInput.value = drafter.series;
+    numberInput.value = drafter.number;
+    dataInput.value = drafter.data;
+    issuedInput.value = drafter.issued;
+    fullnameInput.value = drafter.fullname;
+    buydataInput.value = drafter.buydata;
+    addressInput.value = drafter.address;
+    bankInput.value = drafter.bank;
+    BIKInput.value = drafter.BIK;
+    corrInput.value = drafter.corr;
+    personInput.value = drafter.person;
+  }
+
+  const draftOverlayButton = $(".draft-overlay__button");
+
+  $(draftOverlayButton).on("click", () => {
+    console.log(this);
+    // location.href = "data.html";
+  });
+
+  //очистка черновика
+  $(draftOverlayLink).on("click", () => {
+    localStorage.removeItem("draft");
   });
 });
