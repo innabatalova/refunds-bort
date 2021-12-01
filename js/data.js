@@ -1,4 +1,4 @@
-$(document).ready(function () {
+const data = () => {
   //плагин фиксации курсора в начале поля
   $.fn.setCursorPosition = function (pos) {
     if ($(this).get(0).setSelectionRange) {
@@ -66,7 +66,6 @@ $(document).ready(function () {
   const BIKInput = document.getElementById("BIK");
   const corrInput = document.getElementById("corr");
   const personInput = document.getElementById("person");
-  const draftOverlayLink = $(".draft-overlay__link");
 
   $(document).on("change click keyup", () => {
     const draft = {
@@ -109,16 +108,6 @@ $(document).ready(function () {
     corrInput.value = drafter.corr;
     personInput.value = drafter.person;
   }
+};
 
-  const draftOverlayButton = $(".draft-overlay__button");
-
-  $(draftOverlayButton).on("click", () => {
-    console.log(this);
-    // location.href = "data.html";
-  });
-
-  //очистка черновика
-  $(draftOverlayLink).on("click", () => {
-    localStorage.removeItem("draft");
-  });
-});
+data();
