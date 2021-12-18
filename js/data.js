@@ -1,58 +1,30 @@
 const data = () => {
-  //плагин фиксации курсора в начале поля
-  $.fn.setCursorPosition = function (pos) {
-    if ($(this).get(0).setSelectionRange) {
-      $(this).get(0).setSelectionRange(pos, pos);
-    } else if ($(this).get(0).createTextRange) {
-      var range = $(this).get(0).createTextRange();
-      range.collapse(true);
-      range.moveEnd("character", pos);
-      range.moveStart("character", pos);
-      range.select();
-    }
-  };
-
   //маска ввода серии паспорта
-  $("#series")
-    .click(function () {
-      $(this).setCursorPosition(0);
-    })
-    .mask("99 99", { autoclear: false, placeholder: "*" });
+  $("#series").mask("99 99", { autoclear: false, placeholder: "*" });
 
   //маска ввода номера паспорта
-  $("#number")
-    .click(function () {
-      $(this).setCursorPosition(0);
-    })
-    .mask("99 99 99", { autoclear: false, placeholder: "*" });
+  $("#number").mask("99 99 99", { autoclear: false, placeholder: "*" });
 
   //маска ввода БИК
-  $("#BIK")
-    .click(function () {
-      $(this).setCursorPosition(2);
-    })
-    .mask("049999999", { autoclear: false, placeholder: "*" });
+  $("#BIK").mask("049999999", { autoclear: false, placeholder: "*" });
 
   //маска ввода корр. счета
-  $("#corr")
-    .click(function () {
-      $(this).setCursorPosition(3);
-    })
-    .mask("30199999999999999999", { autoclear: false, placeholder: "*" });
+  $("#corr").mask("30199999999999999999", {
+    autoclear: false,
+    placeholder: "*",
+  });
 
   //маска ввода лицевого счета
-  $("#person")
-    .click(function () {
-      $(this).setCursorPosition(0);
-    })
-    .mask("99999999999999999999", { autoclear: false, placeholder: "*" });
+  $("#person").mask("99999999999999999999", {
+    autoclear: false,
+    placeholder: "*",
+  });
 
   //маска ввода номера телефона
-  $("#phone")
-    .click(function () {
-      $(this).setCursorPosition(0);
-    })
-    .mask("+7 (999) 999 99 99", { autoclear: false, placeholder: "-" });
+  $("#phone").mask("+7 (999) 999 99 99", {
+    autoclear: false,
+    placeholder: "-",
+  });
 
   //сохрание черновика ввода форм
   const seriesInput = document.getElementById("series");

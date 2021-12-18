@@ -182,15 +182,20 @@
             </div>
 
             <div class="row">
-              <div class="refunds-search__form col-xxl-6 offset-xxl-1">
+              <form class="refunds-search__form col-xxl-6 offset-xxl-1">
                 <span class="refunds-search__fieldname"
                   >Введите номер заказа или трек-номер отправления</span
                 >
-                <input type="text" class="refunds-search__field" />
+                <input
+                  type="text"
+                  class="refunds-search__field"
+                  id="orderNumber"
+                  required
+                />
                 <button type="submit" class="refunds-search__button">
                   Найти
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -198,10 +203,139 @@
     </section>
     <!-- /.refunds -->
 
+    <div class="refunds-search__loading loading">
+      <img src="image/loading.svg" alt="loading" />
+    </div>
+
+    <div class="refunds-autorization refunds-autorization-mail">
+      <div class="container-fluid">
+        <h1 class="refunds-autorization__title">
+          Заказ <span>№80087664176230</span> найден!
+        </h1>
+        <span class="refunds-autorization__subtitle"
+          >Мы отправили вам СМС с кодом на номер телефона для подтверждения
+          владельца аккаунта</span
+        >
+        <form class="refunds-autorization__input__wrapper">
+          <label class="refunds-autorization__input__name">Код из СМС</label>
+          <input
+            type="text"
+            class="refunds-autorization__input__field"
+            required
+          />
+          <a class="refunds-autorization__link refunds-autorization__link__mail"
+            >Подтвердить личность по почте</a
+          >
+          <button type="submit" class="refunds-autorization__button">
+            Войти
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="refunds-autorization refunds-autorization-phone">
+      <div class="container-fluid">
+        <h1 class="refunds-autorization__title">
+          Заказ <span>№80087664176230</span> найден!
+        </h1>
+        <span class="refunds-autorization__subtitle"
+          >Авторизуйтесь от пользователя оформившего заказ</span
+        >
+
+        <form class="row">
+          <div class="col-6 row">
+            <div class="refunds-autorization__input__wrapper col-6">
+              <label class="refunds-autorization__input__name">E-mail</label>
+              <input
+                type="text"
+                class="refunds-autorization__input__field"
+                id="email"
+                required
+              />
+            </div>
+            <div class="refunds-autorization__input__wrapper col-6">
+              <label class="refunds-autorization__input__name">Пароль</label>
+              <input
+                type="text"
+                class="refunds-autorization__input__field"
+                required
+              />
+            </div>
+          </div>
+          <a
+            class="refunds-autorization__link refunds-autorization__link__phone"
+            >Подтвердить личность по номеру телефона</a
+          >
+          <button
+            type="submit"
+            class="
+              refunds-autorization__button refunds-autorization__button__email
+            "
+          >
+            Войти
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="refunds-autorization refunds-autorization-refusal">
+      <div class="container-fluid">
+        <h1 class="refunds-autorization__title">
+          Заказ не найден или недоступен для возврата
+        </h1>
+        <span class="refunds-autorization__subtitle"
+          >Укажите данные вручную, мы найдем заказ и перезвоним вам</span
+        >
+        <form>
+          <div class="refunds-autorization__input__wrapper">
+            <label class="refunds-autorization__input__name"
+              >Номер заказа</label
+            >
+            <input
+              type="text"
+              class="refunds-autorization__input__field"
+              required
+            />
+          </div>
+          <div class="refunds-autorization__input__wrapper">
+            <label
+              class="
+                refunds-autorization__input__name
+                refunds-autorization__textarea__name
+              "
+              >Причина возврата (в свободной форме)</label
+            >
+
+            <textarea
+              cols="15"
+              rows="4"
+              class="refunds-autorization__input__textarea"
+              required
+            ></textarea>
+          </div>
+          <div class="refunds-autorization__input__wrapper">
+            <label class="refunds-autorization__input__name"
+              >Телефон для обратной связи</label
+            >
+            <input
+              type="text"
+              class="refunds-autorization__input__field"
+              id="phone"
+              required
+            />
+          </div>
+          <button type="submit" class="refunds-autorization__button">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+
     <div class="footer">
       <img src="image/footer.png" alt="" />
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

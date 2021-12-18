@@ -138,6 +138,7 @@ input {
 .refunds-search {
   background-color: #0084B4;
   padding: 35px 0;
+  min-height: 290px;
 }
 
 .refunds-search__title {
@@ -182,6 +183,25 @@ input {
   border-radius: 3px;
   background-color: #525558;
   color: #FFFFFF;
+}
+
+.refunds-search__loading {
+  display: none;
+  min-height: 290px;
+}
+
+.refunds-autorization-mail {
+  display: none;
+  min-height: 290px;
+}
+
+.refunds-autorization-phone {
+  display: none;
+  min-height: 290px;
+}
+
+.refunds-autorization-refusal {
+  display: none;
 }
 
 .draft-overlay {
