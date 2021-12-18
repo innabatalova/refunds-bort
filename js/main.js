@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  const orderNumber = document.getElementById("orderNumber");
+
+  $(document).on("change click keyup", () => {
+    const order = {
+      number: orderNumber.value,
+    };
+
+    localStorage.setItem("order", JSON.stringify(order)); //сохранение данных в локальном хранилище браузера
+  });
+
   function makeRequest(url) {
     $(".refunds-search__loading").show();
     $(".refunds-search").hide();
@@ -6,8 +16,11 @@ $(document).ready(function () {
       setTimeout(function () {
         data.forEach((item) => {
           console.log(item.id);
-        });
 
+          const ordering = JSON.parse(localStorage.getItem("order"));
+
+          console.log(ordering.number);
+        });
         // $(".refunds-autorization-refusal").show();
       }, 1000);
       setTimeout(function () {
