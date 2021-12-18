@@ -15,18 +15,23 @@ $(document).ready(function () {
     $.get("https://jsonplaceholder.typicode.com/users", function (data) {
       setTimeout(function () {
         data.forEach((item) => {
-          console.log(item.id);
-
           const ordering = JSON.parse(localStorage.getItem("order"));
 
-          console.log(ordering.number);
+          if (ordering.number == item.id) {
+            setTimeout(function () {
+              setTimeout(function () {
+                $(".refunds-search__loading").hide();
+                $(".refunds-autorization-mail").show();
+              }, 900);
+              $(".refunds-autorization-refusal").hide();
+              $(".refunds-search__loading").show();
+            }, 0);
+          } else {
+            $(".refunds-search__loading").hide();
+            $(".refunds-autorization-refusal").show();
+          }
         });
-        // $(".refunds-autorization-refusal").show();
-      }, 1000);
-      setTimeout(function () {
-        $(".refunds-search__loading").hide();
-        $(".refunds-autorization-mail").show();
-      }, 900);
+      }, 500);
     }).fail(function () {
       setTimeout(function () {
         $(".refunds-search__loading").hide();
