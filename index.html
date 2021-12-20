@@ -211,7 +211,7 @@
       <img src="image/loading.svg" alt="loading" />
     </div>
 
-    <div class="refunds-autorization refunds-autorization-mail">
+    <div class="refunds-autorization refunds-autorization-mail step-mail">
       <div class="container-fluid">
         <h1 class="refunds-autorization__title">
           Заказ <span>№80087664176230</span> найден!
@@ -226,6 +226,9 @@
             type="text"
             class="refunds-autorization__input__field"
             required
+            id="stepMail"
+            minlength="10"
+            maxlength="10"
           />
           <a class="refunds-autorization__link refunds-autorization__link__mail"
             >Подтвердить личность по почте</a
@@ -237,7 +240,7 @@
       </div>
     </div>
 
-    <div class="refunds-autorization refunds-autorization-phone">
+    <div class="refunds-autorization refunds-autorization-phone step-phone">
       <div class="container-fluid">
         <h1 class="refunds-autorization__title">
           Заказ <span>№80087664176230</span> найден!
@@ -282,7 +285,7 @@
       </div>
     </div>
 
-    <div class="refunds-autorization refunds-autorization-refusal">
+    <div class="refunds-autorization refunds-autorization-refusal step-refusal">
       <div class="container-fluid">
         <h1 class="refunds-autorization__title">
           Заказ не найден или недоступен для возврата
@@ -334,6 +337,102 @@
         </form>
       </div>
     </div>
+
+    <div class="product-selection step-selection">
+      <div class="container-fluid">
+        <h2 class="product-selection__title">Выберите товары для возврата</h2>
+        <h3 class="product-selection__subtitle">Что бы вы хотели сделать</h3>
+        <div class="row">
+          <div class="col-9">
+            <table class="product-selection__table table">
+              <tr>
+                <th class="product-selection__table__name"></th>
+                <th class="product-selection__table__name">Товар</th>
+                <th class="product-selection__table__name">Цена</th>
+                <th class="product-selection__table__name">Кол-во</th>
+                <th class="product-selection__table__name">Причина</th>
+              </tr>
+              <tr>
+                <td class="product-selection__table__item">
+                  <input type="checkbox" />
+                </td>
+                <td class="product-selection__table__item">
+                  Копье для мойки высокого давления BORT BHL-TURBO (Струйная
+                  трубка; Грязевая фреза)
+                </td>
+                <td class="product-selection__table__item">18 390 Р</td>
+                <td class="product-selection__table__item">
+                  <select name="product-selection__table__select">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </td>
+                <td class="product-selection__table__item">
+                  <select name="product-selection__table__select">
+                    <option value="1" selected>Выберите причину</option>
+                    <option value="2">Первая причина</option>
+                    <option value="3">это ложь</option>
+                    <option value="4">Кто прав кто виноват</option>
+                    <option value="5">не разберешь</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="product-selection__table__item">
+                  <input type="checkbox" />
+                </td>
+                <td class="product-selection__table__item">
+                  Копье для мойки высокого давления BORT BHL-TURBO (Струйная
+                  трубка; Грязевая фреза)
+                </td>
+                <td class="product-selection__table__item">18 390 Р</td>
+                <td class="product-selection__table__item">
+                  <select name="product-selection__table__select">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </td>
+                <td class="product-selection__table__item">
+                  <select name="product-selection__table__select">
+                    <option value="1" selected>Выберите причину</option>
+                    <option value="2">Первая причина</option>
+                    <option value="4">это ложь</option>
+                    <option value="3">Кто прав кто виноват</option>
+                    <option value="5">не разберешь</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <form class="product-selection__comment__wrapper">
+              <label class="product-selection__comment__name"
+                >Оставьте комментарий</label
+              >
+              <textarea
+                cols="30"
+                rows="4"
+                class="product-selection__comment__field"
+              ></textarea>
+              <button type="submit" class="product-selection__button">
+                Вернуть
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.product-selection -->
 
     <div class="footer">
       <img src="image/footer.png" alt="" />

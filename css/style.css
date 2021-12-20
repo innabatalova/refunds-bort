@@ -190,17 +190,12 @@ input {
   min-height: 290px;
 }
 
-.refunds-autorization-mail {
+.step-mail, .step-phone {
   display: none;
   min-height: 290px;
 }
 
-.refunds-autorization-phone {
-  display: none;
-  min-height: 290px;
-}
-
-.refunds-autorization-refusal {
+.step-refusal, .step-selection {
   display: none;
 }
 
