@@ -57,14 +57,6 @@ const data = () => {
     localStorage.setItem("draft", JSON.stringify(draft)); //сохранение данных в локальном хранилище браузера
   });
 
-  // const fillDraft = (draft) => {
-  //   localStorage.getItem("draft", JSON.parse(draft));
-  //   seriesInput.textContent = "draft.series";
-  //   console.log("testing");
-  // };
-
-  // fillDraft();
-
   if (localStorage.getItem("draft")) {
     const drafter = JSON.parse(localStorage.getItem("draft"));
 

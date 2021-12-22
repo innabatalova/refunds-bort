@@ -190,7 +190,7 @@ input {
   min-height: 290px;
 }
 
-.step-mail, .step-phone {
+.step-mail, .step-phone, .step-regphone {
   display: none;
   min-height: 290px;
 }
@@ -529,7 +529,7 @@ input {
 
 .refunds-autorization__input__textarea {
   resize: none;
-  width: 50%;
+  max-width: 570px;
   margin-bottom: 25px;
 }
 
@@ -552,12 +552,12 @@ input {
   width: 125px;
 }
 
-.refunds-autorization__button__email {
-  margin-left: 12px;
-}
-
 .refunds-autorization__button:hover, .refunds-autorization__button:focus {
   color: #a09898;
+}
+
+.refunds-autorization__regphone {
+  padding-left: 0;
 }
 
 .product-selection {
