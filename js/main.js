@@ -23,6 +23,13 @@ $(document).ready(function () {
             setTimeout(function () {
               setTimeout(function () {
                 $(".refunds-search__loading").hide();
+
+                $(".entered-number").append(
+                  $("<span>", {
+                    text: "Заказ №" + memory.number + " найден!",
+                  })
+                );
+
                 $(".refunds-autorization-regphone").show();
               }, 900);
               $(".refunds-search__loading").show();
