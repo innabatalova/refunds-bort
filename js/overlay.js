@@ -1,13 +1,10 @@
 const overlay = () => {
-  const draftOverlayButton = $(".draft-overlay__button");
-  const draftOverlayLink = $(".draft-overlay__link");
-
-  $(draftOverlayButton).on("click", () => {
+  $(".draft-overlay__button").click(function () {
     location.href = "data.html";
   });
 
   //очистка черновика
-  $(draftOverlayLink).on("click", () => {
+  $(".draft-overlay__link").click(function () {
     localStorage.removeItem("draft");
   });
 };

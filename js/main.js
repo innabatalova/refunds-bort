@@ -60,8 +60,15 @@ $(document).ready(function () {
     $(".refunds-autorization-mail").hide();
     $(".refunds-search__loading").show();
 
+    const memory = JSON.parse(localStorage.getItem("order"));
+
     setTimeout(function () {
       $(".refunds-search__loading").hide();
+      $(".entered-number-phone").append(
+        $("<span>", {
+          text: "Заказ №" + memory.number + " найден!",
+        })
+      );
       $(".refunds-autorization-phone").show();
     }, 500);
   });
@@ -81,8 +88,16 @@ $(document).ready(function () {
     $(".refunds-search__loading").show();
     $(".refunds-autorization-regphone").hide();
     $.get("https://jsonplaceholder.typicode.com/users", function (data) {
+      const memory = JSON.parse(localStorage.getItem("order"));
+
       setTimeout(function () {
         $(".refunds-search__loading").hide();
+        $(".entered-number-main").append(
+          $("<span>", {
+            text: "Заказ №" + memory.number + " найден!",
+          })
+        );
+
         $(".refunds-autorization-mail").show();
       }, 500);
     }).fail(function () {
@@ -151,13 +166,49 @@ $(document).ready(function () {
     placeholder: "-",
   });
 
-  $(".product-selection__button").on("click", () => {
-    $(".draft-overlay").addClass("draft-overlay__visible");
-  });
-
   //маска ввода номера телефона
   $("#regphone").mask("+7 (999) 999 99 99", {
     autoclear: false,
     placeholder: "-",
   });
+
+  //открытие черновика, если он есть или перенаправка на страницу возврата
+  function checkDraft() {
+    if (localStorage.getItem("draft")) {
+      $(".draft-overlay").addClass("draft-overlay__visible");
+    } else {
+      setTimeout(function () {
+        $(".product-selection").hide();
+        $(".refunds-search__loading").show();
+        location.href = "data.html";
+      }, 700);
+    }
+  }
+
+  //проверка установки флажка возврата в чекбоксе
+  $(".product-selection__button").click(function () {
+    if ($(".product-selection__checkbox").prop("checked")) {
+      checkDraft();
+    } else {
+      alert("Выберите товары для возврата!");
+    }
+  });
+
+  //перенаправка на черновик
+  $(".draft-overlay__button").click(function () {
+    location.href = "data.html";
+  });
+
+  //очистка черновика
+  $(".draft-overlay__link").click(function () {
+    localStorage.removeItem("draft");
+  });
+
+  // $(".product-selection__checkbox").change(function () {
+  //   if ($(this).prop("checked")) {
+  //     console.log("true");
+  //   } else {
+  //     console.log("false");
+  //   }
+  // });
 });
