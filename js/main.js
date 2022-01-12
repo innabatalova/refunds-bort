@@ -19,9 +19,18 @@ $(document).ready(function () {
   function makeRequest(url) {
     $(".refunds-search__loading").show();
     $(".refunds-search").hide();
-    $.get("https://jsonplaceholder.typicode.com/users", function (data) {
-      setTimeout(function () {
-        data.forEach((item) => {
+
+    Promise.all([
+      $.get("https://jsonplaceholder.typicode.com/users").promise(),
+      $.get("https://jsonplaceholder.typicode.com/posts").promise(),
+    ])
+      .then(function (resultsArray) {
+        const arrUsers = resultsArray[0]; //получение массива данных с одного API
+        const arrPosts = resultsArray[1]; //получение массива данных с другого API
+
+        const arrSumm = $.merge(arrUsers, arrPosts); //объединение данных API в единый массив
+
+        arrSumm.forEach((item) => {
           const memory = JSON.parse(localStorage.getItem("order"));
 
           if (memory.number == item.id) {
@@ -45,14 +54,49 @@ $(document).ready(function () {
             $(".step-refusal").show();
           }
         });
-      }, 500);
-    }).fail(function () {
-      setTimeout(function () {
-        $(".refunds-search__loading").hide();
-        alert("Произошла ошибка, попробуйте еще раз");
-        $(".refunds-search").show();
-      }, 900);
-    });
+      })
+      .catch(function (err) {
+        setTimeout(function () {
+          $(".refunds-search__loading").hide();
+          alert("Произошла ошибка, попробуйте еще раз");
+          $(".refunds-search").show();
+        }, 900);
+      });
+
+    // $.get("https://jsonplaceholder.typicode.com/users", function (data) {
+    //   setTimeout(function () {
+    //     data.forEach((item) => {
+    //       const memory = JSON.parse(localStorage.getItem("order"));
+
+    //       if (memory.number == item.id) {
+    //         setTimeout(function () {
+    //           setTimeout(function () {
+    //             $(".refunds-search__loading").hide();
+
+    //             $(".entered-number").append(
+    //               $("<span>", {
+    //                 text: "Заказ №" + memory.number + " найден!",
+    //               })
+    //             );
+
+    //             $(".refunds-autorization-regphone").show();
+    //           }, 900);
+    //           $(".refunds-search__loading").show();
+    //           $(".refunds-autorization-refusal").hide();
+    //         }, 0);
+    //       } else {
+    //         $(".refunds-search__loading").hide();
+    //         $(".step-refusal").show();
+    //       }
+    //     });
+    //   }, 500);
+    // }).fail(function () {
+    //   setTimeout(function () {
+    //     $(".refunds-search__loading").hide();
+    //     alert("Произошла ошибка, попробуйте еще раз");
+    //     $(".refunds-search").show();
+    //   }, 900);
+    // });
   }
   //запуск проверки номера заказа с данными о заказе на сервере
   $(".refunds-search__form").submit(function (e) {
