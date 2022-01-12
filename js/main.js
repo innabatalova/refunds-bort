@@ -3,9 +3,14 @@ $(document).ready(function () {
   const stepMail = document.getElementById("stepMail");
 
   $(document).on("change click keyup", () => {
+    let dateDraft = new Date();
+
     const order = {
       number: orderNumber.value,
       zipcode: stepMail.value,
+      day: dateDraft.getDate(),
+      month: dateDraft.getMonth(),
+      year: dateDraft.getFullYear(),
     };
 
     localStorage.setItem("order", JSON.stringify(order)); //сохранение номера искомого заказа
@@ -172,10 +177,73 @@ $(document).ready(function () {
     placeholder: "-",
   });
 
+  //сохранение даты заполнения черновика
+  function dateDraft() {
+    const memory = JSON.parse(localStorage.getItem("order"));
+
+    //преобразование сохраненного значения месяца даты заполнения черновика
+    switch (memory.month) {
+      case 0:
+        memory.month = "01";
+        break;
+
+      case 1:
+        memory.month = "02";
+        break;
+
+      case 2:
+        memory.month = "03";
+        break;
+
+      case 3:
+        memory.month = "04";
+        break;
+
+      case 4:
+        memory.month = "05";
+        break;
+
+      case 5:
+        memory.month = "06";
+        break;
+
+      case 6:
+        memory.month = "07";
+        break;
+
+      case 7:
+        memory.month = "08";
+        break;
+
+      case 8:
+        memory.month = "09";
+        break;
+
+      case 9:
+        memory.month = "10";
+        break;
+
+      case 10:
+        memory.month = "11";
+        break;
+
+      case 11:
+        memory.month = "12";
+        break;
+    }
+
+    $(".draft-overlay__date").append(
+      $("<span>", {
+        text: memory.day + "." + memory.month + "." + memory.year,
+      })
+    );
+  }
+
   //открытие черновика, если он есть или перенаправка на страницу возврата
   function checkDraft() {
     if (localStorage.getItem("draft")) {
       $(".draft-overlay").addClass("draft-overlay__visible");
+      dateDraft();
     } else {
       setTimeout(function () {
         $(".product-selection").hide();
@@ -203,12 +271,4 @@ $(document).ready(function () {
   $(".draft-overlay__link").click(function () {
     localStorage.removeItem("draft");
   });
-
-  // $(".product-selection__checkbox").change(function () {
-  //   if ($(this).prop("checked")) {
-  //     console.log("true");
-  //   } else {
-  //     console.log("false");
-  //   }
-  // });
 });
