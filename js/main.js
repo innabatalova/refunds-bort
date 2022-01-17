@@ -3,14 +3,9 @@ $(document).ready(function () {
   const stepMail = document.getElementById("stepMail");
 
   $(document).on("change click keyup", () => {
-    let dateDraft = new Date();
-
     const order = {
       number: orderNumber.value,
       zipcode: stepMail.value,
-      day: dateDraft.getDate(),
-      month: dateDraft.getMonth(),
-      year: dateDraft.getFullYear(),
     };
 
     localStorage.setItem("order", JSON.stringify(order)); //сохранение номера искомого заказа
@@ -23,45 +18,54 @@ $(document).ready(function () {
     Promise.all([
       $.get("https://jsonplaceholder.typicode.com/users").promise(),
       $.get("https://jsonplaceholder.typicode.com/posts").promise(),
-    ])
-      .then(function (resultsArray) {
-        const arrUsers = resultsArray[0]; //получение массива данных с одного API
-        const arrPosts = resultsArray[1]; //получение массива данных с другого API
+    ]).then(function (resultsArray) {
+      const arrUsers = resultsArray[0]; //получение массива данных с одного API
+      const arrPosts = resultsArray[1]; //получение массива данных с другого API
+      const arrDouble = $.merge(arrUsers, arrPosts); //объединение данных API в единый массив
 
-        const arrSumm = $.merge(arrUsers, arrPosts); //объединение данных API в единый массив
+      arrDouble
+        .forEach((item) => {
+          const arrNumbers = resultsArray[item.id]; //массив с номерами заказов
 
-        arrSumm.forEach((item) => {
-          const memory = JSON.parse(localStorage.getItem("order"));
+          let finalArr = arrNumbers.reduce((result, item) => {
+            //удаление дубликатов из массива с номерами
+            return result.includes(item) ? result : [...result, item];
+          }, []);
 
-          if (memory.number == item.id) {
-            setTimeout(function () {
+          finalArr.forEach((item) => {
+            //обработка итогового массива с уник. значениями
+            const memory = JSON.parse(localStorage.getItem("order"));
+
+            if (memory.number == item.id) {
               setTimeout(function () {
-                $(".refunds-search__loading").hide();
+                setTimeout(function () {
+                  $(".refunds-search__loading").hide();
 
-                $(".entered-number").append(
-                  $("<span>", {
-                    text: "Заказ №" + memory.number + " найден!",
-                  })
-                );
+                  $(".entered-number").append(
+                    $("<span>", {
+                      text: "Заказ №" + memory.number + " найден!",
+                    })
+                  );
 
-                $(".refunds-autorization-regphone").show();
-              }, 900);
-              $(".refunds-search__loading").show();
-              $(".refunds-autorization-refusal").hide();
-            }, 0);
-          } else {
+                  $(".refunds-autorization-regphone").show();
+                }, 900);
+                $(".refunds-search__loading").show();
+                $(".refunds-autorization-refusal").hide();
+              }, 0);
+            } else {
+              $(".refunds-search__loading").hide();
+              $(".step-refusal").show();
+            }
+          });
+        })
+        .catch(function (err) {
+          setTimeout(function () {
             $(".refunds-search__loading").hide();
-            $(".step-refusal").show();
-          }
+            alert("Произошла ошибка, попробуйте еще раз");
+            $(".refunds-search").show();
+          }, 900);
         });
-      })
-      .catch(function (err) {
-        setTimeout(function () {
-          $(".refunds-search__loading").hide();
-          alert("Произошла ошибка, попробуйте еще раз");
-          $(".refunds-search").show();
-        }, 900);
-      });
+    });
 
     // $.get("https://jsonplaceholder.typicode.com/users", function (data) {
     //   setTimeout(function () {
@@ -223,7 +227,7 @@ $(document).ready(function () {
 
   //сохранение даты заполнения черновика
   function dateDraft() {
-    const memory = JSON.parse(localStorage.getItem("order"));
+    const memory = JSON.parse(localStorage.getItem("draft"));
 
     //преобразование сохраненного значения месяца даты заполнения черновика
     switch (memory.month) {

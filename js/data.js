@@ -40,6 +40,8 @@ const data = () => {
   const personInput = document.getElementById("person");
 
   $(document).on("change click keyup", () => {
+    let dateDraft = new Date();
+
     const draft = {
       series: seriesInput.value,
       number: numberInput.value,
@@ -52,6 +54,9 @@ const data = () => {
       BIK: BIKInput.value,
       corr: corrInput.value,
       person: personInput.value,
+      day: dateDraft.getDate(),
+      month: dateDraft.getMonth(),
+      year: dateDraft.getFullYear(),
     };
 
     localStorage.setItem("draft", JSON.stringify(draft)); //сохранение данных в локальном хранилище браузера
