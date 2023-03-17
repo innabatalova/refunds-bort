@@ -1,520 +1,308 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Безусловный возврат</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="header">
-      <img src="image/header.png" alt="header" />
-    </div>
-    <img src="image/brreadcrumbs.png" alt="" class="breadcrumb" />
 
-    <section class="refunds">
-      <div class="refunds-wrapper">
-        <div class="refunds-info">
-          <div class="container-fluid">
-            <div class="row">
-              <h2 class="refunds-info__title col-xxl-6 offset-xxl-1">
-                Возврат товара
-              </h2>
-            </div>
-            <div class="row">
-              <p class="refunds-info__text col-xxl-6 offset-xxl-1">
-                В течение 7-ми дней можно вернуть даже использованный товар
-                купленный на сайте extego.ru, мы даём своим покупателям больше
-                прав и возможностей, чем закон о защите прав потребителя.
-              </p>
-            </div>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Безусловный возврат</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href=".css/style.css" />
+</head>
+
+<body>
+  <div class="header">
+    <img src="image/header.png" alt="header" />
+  </div>
+  <img src="image/brreadcrumbs.png" alt="" class="breadcrumb" />
+
+  <section class="refunds">
+    <div class="refunds-wrapper">
+      <div class="refunds-info">
         <div class="container-fluid">
-          <div class="refunds-gide">
-            <h2 class="refunds-gide__title">Как воспользоваться сервисом</h2>
-            <div class="row">
-              <div class="refunds-gide__item col-xxl-3">
-                <div class="refunds-gide__wrap">
-                  <img
-                    src="image/refunds-gide-img1.svg"
-                    alt=""
-                    class="refunds-gide__img"
-                  />
-                  <div>
-                    <h4 class="refunds-gide__subtitle">Найдите свой заказ</h4>
-                    <p class="refunds-gide__text">
-                      Укажите трек номер выданный вам при отправлении, номер
-                      заказа или, если вы авторизованы выберите заказ из списка
-                    </p>
-                  </div>
-                </div>
-                <span class="refunds-gide__info">
-                  <img
-                    src="image/!!!-Icon.svg"
-                    alt="Icon info"
-                    class="refunds-gide__info__img"
-                  />
-                  <span class="refunds-gide__info__text">
-                    Трек номер находится на платежной квитанции выданной вам
-                    вместе с товаром
-                  </span>
-                </span>
-                <span class="refunds-gide__info">
-                  <img
-                    src="image/!!!-Icon.svg"
-                    alt="Icon info"
-                    class="refunds-gide__info__img"
-                  />
-                  <span class="refunds-gide__info__text"
-                    >Номер заказа можно найти в СМС сообщении</span
-                  >
-                </span>
-              </div>
-              <div class="refunds-gide__item col-xxl-3">
-                <div class="refunds-gide__wrap">
-                  <img
-                    src="image/refunds-gide-img2.svg"
-                    alt=""
-                    class="refunds-gide__img"
-                  />
-                  <div>
-                    <h4 class="refunds-gide__subtitle">Подтвердите личность</h4>
-                    <p class="refunds-gide__text">
-                      Если Вы не авторизованы на сайте, то для вашей
-                      идентификации нам потребуется вас идентифицировать
-                    </p>
-                  </div>
-                </div>
-                <span class="refunds-gide__info">
-                  <img
-                    src="image/!!!-Icon.svg"
-                    alt="Icon info"
-                    class="refunds-gide__info__img"
-                  />
-                  <span class="refunds-gide__info__text"
-                    >Также вы можете авторизоваться по почте</span
-                  >
-                </span>
-              </div>
-              <div class="refunds-gide__item col-xxl-3">
-                <div class="refunds-gide__wrap">
-                  <img
-                    src="image/refunds-gide-img3.svg"
-                    alt=""
-                    class="refunds-gide__img"
-                  />
-                  <div>
-                    <h4 class="refunds-gide__subtitle">
-                      Выберите товары для возврата
-                    </h4>
-                    <p class="refunds-gide__text">
-                      Можно выбрать позиции и их количество
-                    </p>
-                  </div>
-                </div>
-                <span class="refunds-gide__info">
-                  <img
-                    src="image/!!!-Icon.svg"
-                    alt="Icon info"
-                    class="refunds-gide__info__img"
-                  />
-                  <span class="refunds-gide__info__text"
-                    >Стоимость за возврат товара рассчитывается по тарифам почты
-                    России</span
-                  >
-                </span>
-              </div>
-
-              <div class="refunds-gide__item col-xxl-3">
-                <div class="refunds-gide__wrap">
-                  <img
-                    src="image/refunds-gide-img4.svg"
-                    alt=""
-                    class="refunds-gide__img"
-                  />
-                  <div>
-                    <h4 class="refunds-gide__subtitle">
-                      Получите трек номер для отправления
-                    </h4>
-                    <p class="refunds-gide__text">
-                      Номер понадобится назвать в отделении почты России
-                    </p>
-                  </div>
-                </div>
-                <span class="refunds-gide__info">
-                  <img
-                    src="image/!!!-Icon.svg"
-                    alt="Icon info"
-                    class="refunds-gide__info__img"
-                  />
-                  <span class="refunds-gide__info__text">
-                    Стоимость отправления товара - бесплатно
-                  </span>
-                </span>
-                <span class="refunds-gide__info">
-                  <img
-                    src="image/!!!-Icon.svg"
-                    alt="Icon info"
-                    class="refunds-gide__info__img"
-                  />
-                  <span class="refunds-gide__info__text"
-                    >Максимальный вес отправления 20кг</span
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="refunds-search">
-          <div class="container-fluid">
-            <div class="row">
-              <h2 class="refunds-search__title col-xxl-6 offset-xxl-1">
-                Найдите свой заказ
-              </h2>
-            </div>
-
-            <div class="row">
-              <form
-                class="refunds-search__form col-xxl-6 offset-xxl-1"
-                action="#"
-                method="get"
-              >
-                <span class="refunds-search__fieldname"
-                  >Введите номер заказа или трек-номер отправления</span
-                >
-                <input
-                  type="text"
-                  class="refunds-search__field"
-                  id="orderNumber"
-                  required
-                />
-                <button type="submit" class="refunds-search__button">
-                  Найти
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /.refunds -->
-
-    <div class="test"></div>
-
-    <div
-      class="refunds-autorization refunds-autorization-regphone step-regphone"
-    >
-      <div class="container-fluid">
-        <div class="row">
-          <h1
-            class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number"
-          ></h1>
-        </div>
-        <div class="row">
-          <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1"
-            >Укажите номер телефона для регистрации на сайте</span
-          >
-        </div>
-        <div class="row">
-          <form
-            class="refunds-autorization__input__wrapper col-xxl-6 offset-xxl-1"
-          >
-            <label class="refunds-autorization__input__name"
-              >Номер телефона</label
-            >
-            <input
-              type="phone"
-              class="refunds-autorization__input__field"
-              id="regphone"
-              required
-            />
-
-            <button type="submit" class="refunds-autorization__button">
-              Подтвердить
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="refunds-search__loading loading">
-      <img src="image/loading.svg" alt="loading" />
-    </div>
-
-    <div class="refunds-autorization refunds-autorization-mail step-mail">
-      <div class="container-fluid">
-        <div class="row">
-          <h1
-            class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number-main"
-          ></h1>
-        </div>
-        <div class="row">
-          <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1"
-            >Мы отправили вам СМС с кодом на номер телефона для подтверждения
-            владельца аккаунта</span
-          >
-        </div>
-        <div class="row">
-          <form
-            class="refunds-autorization__input__wrapper col-xxl-6 offset-xxl-1"
-          >
-            <label class="refunds-autorization__input__name">Код из СМС</label>
-            <input
-              type="text"
-              class="refunds-autorization__input__field"
-              required
-              id="stepMail"
-              minlength="10"
-              maxlength="10"
-            />
-            <a
-              class="refunds-autorization__link refunds-autorization__link__mail"
-              >Подтвердить личность по почте</a
-            >
-            <button type="submit" class="refunds-autorization__button">
-              Войти
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="refunds-autorization refunds-autorization-phone step-phone">
-      <div class="container-fluid">
-        <div class="row">
-          <h1
-            class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number-phone"
-          ></h1>
-        </div>
-        <div class="row">
-          <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1"
-            >Авторизуйтесь от пользователя оформившего заказ</span
-          >
-        </div>
-
-        <form class="row">
-          <div class="col-xxl-6 offset-xxl-1 row refunds-autorization__row">
-            <div
-              class="refunds-autorization__input__wrapper col-6 refunds-autorization__regphone"
-            >
-              <label class="refunds-autorization__input__name">E-mail</label>
-              <input
-                type="text"
-                class="refunds-autorization__input__field"
-                id="email"
-                required
-              />
-            </div>
-            <div class="refunds-autorization__input__wrapper col-6">
-              <label class="refunds-autorization__input__name">Пароль</label>
-              <input
-                type="text"
-                class="refunds-autorization__input__field"
-                required
-              />
-            </div>
+          <div class="row">
+            <h2 class="refunds-info__title col-xxl-6 offset-xxl-1">
+              Возврат товара
+            </h2>
           </div>
           <div class="row">
-            <a
-              class="refunds-autorization__link refunds-autorization__link__phone col-xxl-6 offset-xxl-1"
-              >Подтвердить личность по номеру телефона</a
-            >
+            <p class="refunds-info__text col-xxl-6 offset-xxl-1">
+              В течение 7-ми дней можно вернуть даже использованный товар
+              купленный на сайте extego.ru, мы даём своим покупателям больше
+              прав и возможностей, чем закон о защите прав потребителя.
+            </p>
           </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="refunds-gide">
+          <h2 class="refunds-gide__title">Как воспользоваться сервисом</h2>
           <div class="row">
-            <div class="col-xxl-6 offset-xxl-1">
-              <button
-                type="submit"
-                class="refunds-autorization__button refunds-autorization__button__email"
-              >
-                Войти
-              </button>
+            <div class="refunds-gide__item col-xxl-3">
+              <div class="refunds-gide__wrap">
+                <img src="image/refunds-gide-img1.svg" alt="" class="refunds-gide__img" />
+                <div>
+                  <h4 class="refunds-gide__subtitle">Найдите свой заказ</h4>
+                  <p class="refunds-gide__text">
+                    Укажите трек номер выданный вам при отправлении, номер
+                    заказа или, если вы авторизованы выберите заказ из списка
+                  </p>
+                </div>
+              </div>
+              <span class="refunds-gide__info">
+                <img src="image/!!!-Icon.svg" alt="Icon info" class="refunds-gide__info__img" />
+                <span class="refunds-gide__info__text">
+                  Трек номер находится на платежной квитанции выданной вам
+                  вместе с товаром
+                </span>
+              </span>
+              <span class="refunds-gide__info">
+                <img src="image/!!!-Icon.svg" alt="Icon info" class="refunds-gide__info__img" />
+                <span class="refunds-gide__info__text">Номер заказа можно найти в СМС сообщении</span>
+              </span>
+            </div>
+            <div class="refunds-gide__item col-xxl-3">
+              <div class="refunds-gide__wrap">
+                <img src="image/refunds-gide-img2.svg" alt="" class="refunds-gide__img" />
+                <div>
+                  <h4 class="refunds-gide__subtitle">Подтвердите личность</h4>
+                  <p class="refunds-gide__text">
+                    Если Вы не авторизованы на сайте, то для вашей
+                    идентификации нам потребуется вас идентифицировать
+                  </p>
+                </div>
+              </div>
+              <span class="refunds-gide__info">
+                <img src="image/!!!-Icon.svg" alt="Icon info" class="refunds-gide__info__img" />
+                <span class="refunds-gide__info__text">Также вы можете авторизоваться по почте</span>
+              </span>
+            </div>
+            <div class="refunds-gide__item col-xxl-3">
+              <div class="refunds-gide__wrap">
+                <img src="image/refunds-gide-img3.svg" alt="" class="refunds-gide__img" />
+                <div>
+                  <h4 class="refunds-gide__subtitle">
+                    Выберите товары для возврата
+                  </h4>
+                  <p class="refunds-gide__text">
+                    Можно выбрать позиции и их количество
+                  </p>
+                </div>
+              </div>
+              <span class="refunds-gide__info">
+                <img src="image/!!!-Icon.svg" alt="Icon info" class="refunds-gide__info__img" />
+                <span class="refunds-gide__info__text">Стоимость за возврат товара рассчитывается по тарифам почты
+                  России</span>
+              </span>
+            </div>
+
+            <div class="refunds-gide__item col-xxl-3">
+              <div class="refunds-gide__wrap">
+                <img src="image/refunds-gide-img4.svg" alt="" class="refunds-gide__img" />
+                <div>
+                  <h4 class="refunds-gide__subtitle">
+                    Получите трек номер для отправления
+                  </h4>
+                  <p class="refunds-gide__text">
+                    Номер понадобится назвать в отделении почты России
+                  </p>
+                </div>
+              </div>
+              <span class="refunds-gide__info">
+                <img src="image/!!!-Icon.svg" alt="Icon info" class="refunds-gide__info__img" />
+                <span class="refunds-gide__info__text">
+                  Стоимость отправления товара - бесплатно
+                </span>
+              </span>
+              <span class="refunds-gide__info">
+                <img src="image/!!!-Icon.svg" alt="Icon info" class="refunds-gide__info__img" />
+                <span class="refunds-gide__info__text">Максимальный вес отправления 20кг</span>
+              </span>
             </div>
           </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="refunds-autorization refunds-autorization-refusal step-refusal">
-      <div class="container-fluid">
-        <div class="row">
-          <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1">
-            Заказ не найден или недоступен для возврата
-          </h1>
-        </div>
-        <div class="row">
-          <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1"
-            >Укажите данные вручную, мы найдем заказ и перезвоним вам</span
-          >
-        </div>
-        <div class="row">
-          <form class="col-xxl-6 offset-xxl-1">
-            <div class="refunds-autorization__input__wrapper">
-              <label class="refunds-autorization__input__name"
-                >Номер заказа</label
-              >
-              <input
-                type="text"
-                class="refunds-autorization__input__field"
-                required
-              />
-            </div>
-            <div class="refunds-autorization__input__wrapper">
-              <label
-                class="refunds-autorization__input__name refunds-autorization__textarea__name"
-                >Причина возврата (в свободной форме)</label
-              >
-
-              <textarea
-                cols="15"
-                rows="4"
-                class="refunds-autorization__input__textarea"
-                required
-              ></textarea>
-            </div>
-            <div class="refunds-autorization__input__wrapper">
-              <label class="refunds-autorization__input__name"
-                >Телефон для обратной связи</label
-              >
-              <input
-                type="phone"
-                class="refunds-autorization__input__field"
-                id="phone"
-                required
-              />
-            </div>
-            <button type="submit" class="refunds-autorization__button">
-              Отправить
-            </button>
-          </form>
         </div>
       </div>
-    </div>
-
-    <div class="product-selection step-selection">
-      <div class="container-fluid">
-        <h2 class="product-selection__title">Выберите товары для возврата</h2>
-        <h3 class="product-selection__subtitle">Что бы вы хотели сделать</h3>
-        <div class="row">
-          <div class="col-9">
-            <table class="product-selection__table table">
-              <tr>
-                <th class="product-selection__table__name"></th>
-                <th class="product-selection__table__name">Товар</th>
-                <th class="product-selection__table__name">Цена</th>
-                <th class="product-selection__table__name">Кол-во</th>
-                <th class="product-selection__table__name">Причина</th>
-              </tr>
-              <tr>
-                <td class="product-selection__table__item">
-                  <input type="checkbox" class="product-selection__checkbox" />
-                </td>
-                <td class="product-selection__table__item">
-                  Копье для мойки высокого давления BORT BHL-TURBO (Струйная
-                  трубка; Грязевая фреза)
-                </td>
-                <td class="product-selection__table__item">18 390 Р</td>
-                <td class="product-selection__table__item">
-                  <select name="product-selection__table__select">
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                  </select>
-                </td>
-                <td class="product-selection__table__item">
-                  <select name="product-selection__table__select">
-                    <option value="1" selected>Выберите причину</option>
-                    <option value="2">Первая причина</option>
-                    <option value="3">это ложь</option>
-                    <option value="4">Кто прав кто виноват</option>
-                    <option value="5">не разберешь</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td class="product-selection__table__item">
-                  <input type="checkbox" />
-                </td>
-                <td class="product-selection__table__item">
-                  Копье для мойки высокого давления BORT BHL-TURBO (Струйная
-                  трубка; Грязевая фреза)
-                </td>
-                <td class="product-selection__table__item">18 390 Р</td>
-                <td class="product-selection__table__item">
-                  <select name="product-selection__table__select">
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                  </select>
-                </td>
-                <td class="product-selection__table__item">
-                  <select name="product-selection__table__select">
-                    <option value="1" selected>Выберите причину</option>
-                    <option value="2">Первая причина</option>
-                    <option value="4">это ложь</option>
-                    <option value="3">Кто прав кто виноват</option>
-                    <option value="5">не разберешь</option>
-                  </select>
-                </td>
-              </tr>
-            </table>
+      <div class="refunds-search">
+        <div class="container-fluid">
+          <div class="row">
+            <h2 class="refunds-search__title col-xxl-6 offset-xxl-1">
+              Найдите свой заказ
+            </h2>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <form class="product-selection__comment__wrapper">
-              <label class="product-selection__comment__name"
-                >Оставьте комментарий</label
-              >
-              <textarea
-                cols="30"
-                rows="4"
-                class="product-selection__comment__field"
-                required
-              ></textarea>
-              <button type="submit" class="product-selection__button">
-                Вернуть
+
+          <div class="row">
+            <form class="refunds-search__form col-xxl-6 offset-xxl-1" action="#" method="get">
+              <span class="refunds-search__fieldname">Введите номер заказа или трек-номер отправления</span>
+              <input type="text" class="refunds-search__field" id="orderNumber" required />
+              <button type="submit" class="refunds-search__button">
+                Найти
               </button>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <!-- /.product-selection -->
+  </section>
+  <!-- /.refunds -->
 
-    <div class="draft-overlay">
-      <div class="draft-overlay__open">
-        <h3 class="draft-overlay__title">У вас есть сохраненный черновик</h3>
-        <p class="draft-overlay__text">
-          <span class="draft-overlay__date"></span>
-          вы уже начали заполнять заявление на возврат товаров
-        </p>
-        <button class="draft-overlay__button">Продолжить заполнять</button>
-        <span class="draft-overlay__span">или</span>
-        <a href="data.html" class="draft-overlay__link">Начать заново</a>
+  <div class="refunds-autorization refunds-autorization-regphone step-regphone">
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number"></h1>
+      </div>
+      <div class="row">
+        <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1">Укажите номер телефона для регистрации на
+          сайте</span>
+      </div>
+      <div class="row">
+        <form class="refunds-autorization__input__wrapper col-xxl-6 offset-xxl-1">
+          <label class="refunds-autorization__input__name">Номер телефона</label>
+          <input type="phone" class="refunds-autorization__input__field" id="regphone" required />
+
+          <button type="submit" class="refunds-autorization__button">
+            Подтвердить
+          </button>
+        </form>
       </div>
     </div>
+  </div>
 
-    <div class="footer">
-      <img src="image/footer.png" alt="" />
+  <div class="refunds-autorization step-status">
+    <div class="container-fluid">
+      <div class="row">
+        <h2 class="refunds-status__title col-xxl-6 offset-xxl-1">
+          Статус Вашего заказа : <span class="refunds-status__title__value">новый</span>
+        </h2>
+      </div>
+      <div class="row">
+        <span class="refunds-status__info col-xxl-6 offset-xxl-1">Оформление возврата доступно только после получения товара</span>
+        <span class="refunds-status__info col-xxl-6 offset-xxl-1">
+          <<< вернуться к поиску заказа</span>
+      </div>
     </div>
+  </div>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <div class="refunds-autorization refunds-autorization-phone step-phone">
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number-phone"></h1>
+      </div>
+      <div class="row">
+        <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1">Авторизуйтесь от пользователя оформившего
+          заказ</span>
+      </div>
+
+      <form class="row">
+        <div class="col-xxl-6 offset-xxl-1 row refunds-autorization__row">
+          <div class="refunds-autorization__input__wrapper col-6 refunds-autorization__regphone">
+            <label class="refunds-autorization__input__name">E-mail</label>
+            <input type="text" class="refunds-autorization__input__field" id="email" required />
+          </div>
+          <div class="refunds-autorization__input__wrapper col-6">
+            <label class="refunds-autorization__input__name">Пароль</label>
+            <input type="text" class="refunds-autorization__input__field" required />
+          </div>
+        </div>
+        <div class="row">
+          <a class="refunds-autorization__link refunds-autorization__link__phone col-xxl-6 offset-xxl-1">Подтвердить
+            личность по номеру телефона</a>
+        </div>
+        <div class="row">
+          <div class="col-xxl-6 offset-xxl-1">
+            <button type="submit" class="refunds-autorization__button refunds-autorization__button__email">
+              Войти
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="refunds-autorization refunds-autorization-mail step-mail">
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number-main"></h1>
+      </div>
+      <div class="row">
+        <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1">Мы отправили вам СМС с кодом на номер
+          телефона для подтверждения
+          владельца аккаунта</span>
+      </div>
+      <div class="row">
+        <form class="refunds-autorization__input__wrapper col-xxl-6 offset-xxl-1">
+          <label class="refunds-autorization__input__name">Код из СМС</label>
+          <input type="text" class="refunds-autorization__input__field" required id="stepMail" minlength="10"
+            maxlength="10" />
+          <a class="refunds-autorization__link refunds-autorization__link__mail">Подтвердить личность по почте</a>
+          <button type="submit" class="refunds-autorization__button">
+            Войти
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="refunds-autorization refunds-autorization-refusal step-refusal">
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1">
+          Заказ не найден или недоступен для возврата
+        </h1>
+      </div>
+      <div class="row">
+        <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1">Укажите данные вручную, мы найдем заказ и
+          перезвоним вам</span>
+      </div>
+      <div class="row">
+        <form class="col-xxl-6 offset-xxl-1">
+          <div class="refunds-autorization__input__wrapper">
+            <label class="refunds-autorization__input__name">Номер заказа</label>
+            <input type="text" class="refunds-autorization__input__field" required />
+          </div>
+          <div class="refunds-autorization__input__wrapper">
+            <label class="refunds-autorization__input__name refunds-autorization__textarea__name">Причина возврата (в
+              свободной форме)</label>
+
+            <textarea cols="15" rows="4" class="refunds-autorization__input__textarea" required></textarea>
+          </div>
+          <div class="refunds-autorization__input__wrapper">
+            <label class="refunds-autorization__input__name">Телефон для обратной связи</label>
+            <input type="phone" class="refunds-autorization__input__field" id="phone" required />
+          </div>
+          <button type="submit" class="refunds-autorization__button">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="refunds-search__loading loading">
+    <img src="image/loading.svg" alt="loading" />
+  </div>
+
+  <div class="draft-overlay">
+    <div class="draft-overlay__open">
+      <h3 class="draft-overlay__title">У вас есть сохраненный черновик</h3>
+      <p class="draft-overlay__text">
+        <span class="draft-overlay__date"></span>
+        вы уже начали заполнять заявление на возврат товаров
+      </p>
+      <button class="draft-overlay__button">Продолжить заполнять</button>
+      <span class="draft-overlay__span">или</span>
+      <a href="data.html" class="draft-overlay__link">Начать заново</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <img src="image/footer.png" alt="" />
+  </div>
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

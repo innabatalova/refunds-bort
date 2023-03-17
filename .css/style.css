@@ -40,7 +40,6 @@ input {
     transform: rotate(360deg);
   }
 }
-
 .loading img {
   display: block;
   margin-left: auto;
@@ -51,13 +50,11 @@ input {
 .refunds {
   font-family: Roboto;
 }
-
 .refunds-info {
   background-color: #0084B4;
   padding-top: 35px;
   padding-bottom: 45px;
 }
-
 .refunds-info__title {
   font-style: normal;
   font-weight: bold;
@@ -67,7 +64,6 @@ input {
   color: #FFFFFF;
   margin-bottom: 45px;
 }
-
 .refunds-info__text {
   font-style: normal;
   font-weight: normal;
@@ -75,11 +71,9 @@ input {
   line-height: 20px;
   color: #FFFFFF;
 }
-
 .refunds-gide {
   padding: 50px 0;
 }
-
 .refunds-gide__title {
   font-style: normal;
   font-weight: 500;
@@ -87,23 +81,19 @@ input {
   line-height: 28px;
   margin-bottom: 30px;
 }
-
 .refunds-gide__item {
   display: flex;
   flex-direction: column;
 }
-
 .refunds-gide__wrap {
   display: flex;
   margin-bottom: 10px;
 }
-
 .refunds-gide__img {
   max-width: 90px;
   max-height: 90px;
   margin-right: 10px;
 }
-
 .refunds-gide__subtitle {
   font-style: normal;
   font-weight: bold;
@@ -111,14 +101,12 @@ input {
   line-height: 14px;
   margin-bottom: 5px;
 }
-
 .refunds-gide__text {
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
   line-height: 13px;
 }
-
 .refunds-gide__info {
   display: flex;
   font-style: normal;
@@ -128,19 +116,17 @@ input {
   color: rgba(0, 0, 0, 0.38);
   margin-bottom: 5px;
 }
-
 .refunds-gide__info__img {
   max-width: 10px;
   max-height: 10px;
   margin-right: 10px;
 }
-
 .refunds-search {
   background-color: #0084B4;
   padding: 35px 0;
   min-height: 290px;
+  margin-bottom: 40px;
 }
-
 .refunds-search__title {
   font-family: Roboto;
   font-style: normal;
@@ -150,12 +136,10 @@ input {
   color: #FFFFFF;
   margin-bottom: 40px;
 }
-
 .refunds-search__form {
   display: flex;
   flex-direction: column;
 }
-
 .refunds-search__fieldname {
   font-style: normal;
   font-weight: 500;
@@ -164,13 +148,11 @@ input {
   color: #FFFFFF;
   margin-bottom: 5px;
 }
-
 .refunds-search__field {
   max-width: 300px;
   height: 35px;
   margin-bottom: 45px;
 }
-
 .refunds-search__button {
   max-width: 125px;
   height: 35px;
@@ -184,25 +166,42 @@ input {
   background-color: #525558;
   color: #FFFFFF;
 }
-
-.refunds-search__loading {
-  display: none;
+.refunds-status__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+.refunds-status__title__value {
+  text-transform: uppercase;
+}
+.refunds-status__info {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 25px;
+}
+.refunds-status__loading {
+  display: block;
   min-height: 290px;
 }
 
 .step-mail, .step-phone, .step-regphone {
-  display: none;
+  display: block;
   min-height: 290px;
 }
-
 .step-refusal, .step-selection {
-  display: none;
+  display: block;
 }
 
 .draft-overlay {
   display: none;
 }
-
 .draft-overlay__visible {
   display: block;
   position: fixed;
@@ -213,7 +212,6 @@ input {
   z-index: 15;
   background: rgba(141, 141, 141, 0.7);
 }
-
 .draft-overlay__open {
   font-family: Roboto;
   position: fixed;
@@ -223,14 +221,12 @@ input {
   padding: 40px 120px;
   background-color: #FFF;
 }
-
 .draft-overlay__title {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
 }
-
 .draft-overlay__text {
   font-style: normal;
   font-weight: normal;
@@ -238,7 +234,6 @@ input {
   line-height: 14px;
   margin-bottom: 25px;
 }
-
 .draft-overlay__button {
   font-style: normal;
   font-weight: 500;
@@ -251,7 +246,6 @@ input {
   color: #FFF;
   margin-right: 20px;
 }
-
 .draft-overlay__span {
   font-style: normal;
   font-weight: normal;
@@ -259,7 +253,6 @@ input {
   line-height: 14px;
   margin-right: 25px;
 }
-
 .draft-overlay__link {
   font-style: normal;
   font-weight: normal;
@@ -274,7 +267,6 @@ input {
   color: #FFF;
   padding: 35px 0;
 }
-
 .data-user__title {
   font-style: normal;
   font-weight: 500;
@@ -283,7 +275,6 @@ input {
   margin: 0;
   margin-bottom: 15px;
 }
-
 .data-user__info {
   display: inline-block;
   font-style: normal;
@@ -292,11 +283,9 @@ input {
   line-height: 14px;
   margin-bottom: 30px;
 }
-
 .data-user__wrapper {
   margin-bottom: 30px;
 }
-
 .data-user__subtitle {
   font-style: normal;
   font-weight: 500;
@@ -304,13 +293,11 @@ input {
   line-height: 21px;
   margin-bottom: 20px;
 }
-
 .data-user__input__wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 35px;
 }
-
 .data-user__input__name {
   font-style: normal;
   font-weight: 500;
@@ -318,16 +305,13 @@ input {
   line-height: 15px;
   margin-bottom: 5px;
 }
-
 .data-user__input__field {
   height: 35px;
 }
-
 .data-user__input__field__date {
   padding-left: 55px;
   padding-right: 25px;
 }
-
 .data-user__table__title {
   font-style: normal;
   font-weight: 500;
@@ -335,7 +319,6 @@ input {
   line-height: 19px;
   margin-bottom: 10px;
 }
-
 .data-user__cause {
   font-style: normal;
   font-weight: 500;
@@ -343,7 +326,6 @@ input {
   line-height: 15px;
   margin-bottom: 20px;
 }
-
 .data-user__comment {
   font-style: normal;
   font-weight: 500;
@@ -351,11 +333,9 @@ input {
   line-height: 15px;
   margin-bottom: 60px;
 }
-
 .data-user__checkbox {
   margin-bottom: 10px;
 }
-
 .data-user__checkbox__label {
   font-style: normal;
   font-weight: normal;
@@ -363,13 +343,11 @@ input {
   line-height: 14px;
   margin-left: 10px;
 }
-
 .data-user__print {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .data-user__print__button {
   font-style: normal;
   font-weight: 500;
@@ -381,18 +359,15 @@ input {
   color: #FFF;
   padding: 7px 38.5px;
 }
-
 .data-user__print__button:hover, .data-user__print__button:focus {
   color: #a09898;
 }
-
 .data-user__print__span {
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
   line-height: 15px;
 }
-
 .data-user__print__link {
   font-style: normal;
   font-weight: 500;
@@ -400,16 +375,13 @@ input {
   line-height: 15px;
   color: #FFF;
 }
-
 .data-user__print__link:hover, .data-user__print__link:focus {
   color: #525558;
 }
-
 .data-user__table {
   border: 1px solid #FFF;
   margin-bottom: 20px;
 }
-
 .data-user__table__name, .data-user__table__item {
   font-style: normal;
   font-weight: bold;
@@ -426,7 +398,6 @@ input {
   color: #FFF;
   padding: 35px 0;
 }
-
 .info__title, .info__number {
   margin: 0;
   font-style: normal;
@@ -434,11 +405,9 @@ input {
   font-size: 36px;
   line-height: 42px;
 }
-
 .info__table {
   margin-top: 30px;
 }
-
 .info__table__name {
   height: 45px;
   border: 1px solid #A2A2A2;
@@ -447,7 +416,6 @@ input {
   font-size: 12px;
   line-height: 14px;
 }
-
 .info__table__item {
   height: 45px;
   border: 1px solid #A2A2A2;
@@ -456,7 +424,6 @@ input {
   font-size: 12px;
   line-height: 14px;
 }
-
 .info__table__check {
   width: 30px;
 }
@@ -468,7 +435,6 @@ input {
   padding: 35px 0;
   margin-bottom: 40px;
 }
-
 .refunds-autorization__title {
   font-style: normal;
   font-weight: 500;
@@ -477,11 +443,9 @@ input {
   margin-top: 0;
   margin-bottom: 5px;
 }
-
 .refunds-autorization__search__title {
   margin-bottom: 40px;
 }
-
 .refunds-autorization__subtitle {
   display: inline-block;
   font-style: normal;
@@ -490,7 +454,6 @@ input {
   line-height: 15px;
   margin-bottom: 25px;
 }
-
 .refunds-autorization__link {
   display: inline-block;
   text-decoration: underline;
@@ -501,18 +464,15 @@ input {
   font-size: 10px;
   line-height: 12px;
 }
-
 .refunds-autorization__link:hover, .refunds-autorization__link:focus {
   color: #FFF;
   opacity: 0.75;
 }
-
 .refunds-autorization__input__wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 5px;
 }
-
 .refunds-autorization__input__name {
   font-style: normal;
   font-weight: 500;
@@ -520,23 +480,19 @@ input {
   line-height: 15px;
   margin-bottom: 5px;
 }
-
 .refunds-autorization__input__field {
   height: 35px;
   max-width: 210px;
   margin-bottom: 5px;
 }
-
 .refunds-autorization__input__textarea {
   resize: none;
   max-width: 570px;
   margin-bottom: 25px;
 }
-
 .refunds-autorization__textarea__name {
   margin-top: 20px;
 }
-
 .refunds-autorization__button {
   margin-top: 25px;
   font-style: normal;
@@ -551,11 +507,9 @@ input {
   padding-bottom: 7px;
   width: 125px;
 }
-
 .refunds-autorization__button:hover, .refunds-autorization__button:focus {
   color: #a09898;
 }
-
 .refunds-autorization__regphone {
   padding-left: 0;
 }
@@ -567,7 +521,6 @@ input {
   padding-bottom: 45px;
   margin-bottom: 40px;
 }
-
 .product-selection__title {
   font-style: normal;
   font-weight: 500;
@@ -575,7 +528,6 @@ input {
   line-height: 28px;
   margin-bottom: 20px;
 }
-
 .product-selection__subtitle {
   font-style: normal;
   font-weight: normal;
@@ -583,12 +535,10 @@ input {
   line-height: 14px;
   margin-bottom: 20px;
 }
-
 .product-selection__table {
   border: 1px solid #A2A2A2;
   margin-bottom: 30px;
 }
-
 .product-selection__table__name {
   font-style: normal;
   font-weight: bold;
@@ -596,7 +546,6 @@ input {
   line-height: 14px;
   border: 1px solid #A2A2A2;
 }
-
 .product-selection__table__item {
   font-style: normal;
   font-weight: normal;
@@ -604,12 +553,10 @@ input {
   line-height: 14px;
   border: 1px solid #A2A2A2;
 }
-
 .product-selection__comment__wrapper {
   display: flex;
   flex-direction: column;
 }
-
 .product-selection__comment__name {
   font-style: normal;
   font-weight: normal;
@@ -617,12 +564,10 @@ input {
   line-height: 14px;
   margin-bottom: 7px;
 }
-
 .product-selection__comment__field {
   resize: none;
   outline: none;
 }
-
 .product-selection__button {
   font-style: normal;
   font-weight: 500;
@@ -636,8 +581,6 @@ input {
   border: none;
   margin-top: 20px;
 }
-
 .product-selection__button:hover, .product-selection__button:focus {
   color: #a09898;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

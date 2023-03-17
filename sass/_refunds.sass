@@ -76,6 +76,7 @@
     background-color: #0084B4
     padding: 35px 0
     min-height: 290px
+    margin-bottom: 40px
 
     &__title
       font-family: Roboto
@@ -116,15 +117,40 @@
       background-color: #525558
       color: #FFFFFF
 
+  &-status
+
+    &__title
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 24px
+      line-height: 28px
+      color: #FFFFFF
+      margin-bottom: 40px
+
+      &__value
+        text-transform: uppercase
+
+    &__info
+      display: inline-block
+      font-style: normal
+      font-weight: 500
+      font-size: 12px
+      line-height: 15px
+      margin-bottom: 25px
+
     &__loading
-      display: none
+      //display: none
+      display: block
       min-height: 290px
 
 .step
 
   &-mail, &-phone, &-regphone
-    display: none
+    //display: none
+    display: block
     min-height: 290px
 
   &-refusal, &-selection
-    display: none
+    //display: none
+    display: block
