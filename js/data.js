@@ -77,6 +77,16 @@ const data = () => {
     corrInput.value = drafter.corr;
     personInput.value = drafter.person;
   }
+
+  //проверка установки флажка возврата в чекбоксе
+  $(".data-user__forward__button").click(function (e) {
+    if ($("#check").prop("checked")) {
+      e.preventDefault();
+      location.href = "result.html";
+    } else {
+      alert("Отметьте согласие на обработку персональных данных!");
+    }
+  });
 };
 
 data();

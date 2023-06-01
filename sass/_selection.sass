@@ -1,9 +1,10 @@
 .product-selection
+  display: none
   font-family: Roboto
   background-color: #CCCCCC
   padding-top: 35px
   padding-bottom: 45px
-  margin-bottom: 40px //отступ для верстки
+  margin-bottom: 40px
 
   &__title
     font-style: normal
@@ -69,3 +70,12 @@
 
     &:hover, &:focus
       color: #a09898
+
+@media screen and ( max-width: 520px )
+  .product-selection
+
+    &__table
+      
+      &__select
+        width: 90px
+

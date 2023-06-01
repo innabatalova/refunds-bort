@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Безусловный возврат</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
-  <link rel="stylesheet" href=".css/style.css" />
+  <link rel="stylesheet" href="./bootstrap/normalize.css" />
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -22,12 +23,12 @@
       <div class="refunds-info">
         <div class="container-fluid">
           <div class="row">
-            <h2 class="refunds-info__title col-xxl-6 offset-xxl-1">
+            <h2 class="refunds-info__title col-xxl-6 ">
               Возврат товара
             </h2>
           </div>
           <div class="row">
-            <p class="refunds-info__text col-xxl-6 offset-xxl-1">
+            <p class="refunds-info__text col-xxl-6 ">
               В течение 7-ми дней можно вернуть даже использованный товар
               купленный на сайте extego.ru, мы даём своим покупателям больше
               прав и возможностей, чем закон о защите прав потребителя.
@@ -126,13 +127,13 @@
       <div class="refunds-search">
         <div class="container-fluid">
           <div class="row">
-            <h2 class="refunds-search__title col-xxl-6 offset-xxl-1">
+            <h2 class="refunds-search__title col-xxl-6 ">
               Найдите свой заказ
             </h2>
           </div>
 
           <div class="row">
-            <form class="refunds-search__form col-xxl-6 offset-xxl-1" action="#" method="get">
+            <form class="refunds-search__form col-xxl-6 " action="#" method="get">
               <span class="refunds-search__fieldname">Введите номер заказа или трек-номер отправления</span>
               <input type="text" class="refunds-search__field" id="orderNumber" required />
               <button type="submit" class="refunds-search__button">
@@ -149,14 +150,14 @@
   <div class="refunds-autorization refunds-autorization-regphone step-regphone">
     <div class="container-fluid">
       <div class="row">
-        <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number"></h1>
+        <h1 class="refunds-autorization__title col-xxl-6  entered-number"></h1>
       </div>
       <div class="row">
-        <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1">Укажите номер телефона для регистрации на
+        <span class="refunds-autorization__subtitle col-xxl-6 ">Укажите номер телефона для регистрации на
           сайте</span>
       </div>
       <div class="row">
-        <form class="refunds-autorization__input__wrapper col-xxl-6 offset-xxl-1">
+        <form class="refunds-autorization__input__wrapper col-xxl-6 ">
           <label class="refunds-autorization__input__name">Номер телефона</label>
           <input type="phone" class="refunds-autorization__input__field" id="regphone" required />
 
@@ -167,49 +168,35 @@
       </div>
     </div>
   </div>
-
-  <div class="refunds-autorization step-status">
-    <div class="container-fluid">
-      <div class="row">
-        <h2 class="refunds-status__title col-xxl-6 offset-xxl-1">
-          Статус Вашего заказа : <span class="refunds-status__title__value">новый</span>
-        </h2>
-      </div>
-      <div class="row">
-        <span class="refunds-status__info col-xxl-6 offset-xxl-1">Оформление возврата доступно только после получения товара</span>
-        <span class="refunds-status__info col-xxl-6 offset-xxl-1">
-          <<< вернуться к поиску заказа</span>
-      </div>
-    </div>
-  </div>
+    <!-- /.step-regphone -->
 
   <div class="refunds-autorization refunds-autorization-phone step-phone">
     <div class="container-fluid">
       <div class="row">
-        <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number-phone"></h1>
+        <h1 class="refunds-autorization__title col-xxl-6  entered-number-phone"></h1>
       </div>
       <div class="row">
-        <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1">Авторизуйтесь от пользователя оформившего
+        <span class="refunds-autorization__subtitle col-xxl-6 ">Авторизуйтесь от пользователя оформившего
           заказ</span>
       </div>
 
       <form class="row">
-        <div class="col-xxl-6 offset-xxl-1 row refunds-autorization__row">
-          <div class="refunds-autorization__input__wrapper col-6 refunds-autorization__regphone">
+        <div class="col-xxl-6  row refunds-autorization__row">
+          <div class="refunds-autorization__input__wrapper col-5 refunds-autorization__regphone">
             <label class="refunds-autorization__input__name">E-mail</label>
             <input type="text" class="refunds-autorization__input__field" id="email" required />
           </div>
-          <div class="refunds-autorization__input__wrapper col-6">
+          <div class="refunds-autorization__input__wrapper col-5">
             <label class="refunds-autorization__input__name">Пароль</label>
             <input type="text" class="refunds-autorization__input__field" required />
           </div>
         </div>
         <div class="row">
-          <a class="refunds-autorization__link refunds-autorization__link__phone col-xxl-6 offset-xxl-1">Подтвердить
+          <a class="refunds-autorization__link refunds-autorization__link__phone col-xxl-6 ">Подтвердить
             личность по номеру телефона</a>
         </div>
         <div class="row">
-          <div class="col-xxl-6 offset-xxl-1">
+          <div class="col-xxl-6 ">
             <button type="submit" class="refunds-autorization__button refunds-autorization__button__email">
               Войти
             </button>
@@ -218,19 +205,20 @@
       </form>
     </div>
   </div>
+      <!-- /.step-phone -->
 
   <div class="refunds-autorization refunds-autorization-mail step-mail">
     <div class="container-fluid">
       <div class="row">
-        <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1 entered-number-main"></h1>
+        <h1 class="refunds-autorization__title col-xxl-6  entered-number-main"></h1>
       </div>
       <div class="row">
-        <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1">Мы отправили вам СМС с кодом на номер
+        <span class="refunds-autorization__subtitle col-xxl-6 ">Мы отправили вам СМС с кодом на номер
           телефона для подтверждения
           владельца аккаунта</span>
       </div>
       <div class="row">
-        <form class="refunds-autorization__input__wrapper col-xxl-6 offset-xxl-1">
+        <form class="refunds-autorization__input__wrapper col-xxl-6 ">
           <label class="refunds-autorization__input__name">Код из СМС</label>
           <input type="text" class="refunds-autorization__input__field" required id="stepMail" minlength="10"
             maxlength="10" />
@@ -242,20 +230,21 @@
       </div>
     </div>
   </div>
+    <!-- /.step-mail -->
 
   <div class="refunds-autorization refunds-autorization-refusal step-refusal">
     <div class="container-fluid">
       <div class="row">
-        <h1 class="refunds-autorization__title col-xxl-6 offset-xxl-1">
+        <h1 class="refunds-autorization__title col-xxl-6 ">
           Заказ не найден или недоступен для возврата
         </h1>
       </div>
       <div class="row">
-        <span class="refunds-autorization__subtitle col-xxl-6 offset-xxl-1">Укажите данные вручную, мы найдем заказ и
+        <span class="refunds-autorization__subtitle col-xxl-6 ">Укажите данные вручную, мы найдем заказ и
           перезвоним вам</span>
       </div>
       <div class="row">
-        <form class="col-xxl-6 offset-xxl-1">
+        <form class="col-xxl-6 ">
           <div class="refunds-autorization__input__wrapper">
             <label class="refunds-autorization__input__name">Номер заказа</label>
             <input type="text" class="refunds-autorization__input__field" required />
@@ -277,10 +266,102 @@
       </div>
     </div>
   </div>
+    <!-- /.step-refusal -->
 
-  <div class="refunds-search__loading loading">
+  <div class="refunds-search__loading step-loading">
     <img src="image/loading.svg" alt="loading" />
   </div>
+  <!-- /.step-loading -->
+
+  <div class="product-selection">
+    <div class="container-fluid">
+      <h2 class="product-selection__title">Выберите товары для возврата</h2>
+      <h3 class="product-selection__subtitle">Что бы вы хотели сделать</h3>
+      <div class="row">
+        <div class="col-12 col-lg-9">
+          <table class="product-selection__table table">
+            <tr>
+              <th class="product-selection__table__name"></th>
+              <th class="product-selection__table__name">Товар</th>
+              <th class="product-selection__table__name">Цена</th>
+              <th class="product-selection__table__name">Кол-во</th>
+              <th class="product-selection__table__name">Причина</th>
+            </tr>
+            <tr>
+              <td class="product-selection__table__item">
+                <input type="checkbox" class="product-selection__checkbox"/>
+              </td>
+              <td class="product-selection__table__item">
+                Копье для мойки высокого давления BORT BHL-TURBO (Струйная
+                трубка; Грязевая фреза)
+              </td>
+              <td class="product-selection__table__item">18 390 Р</td>
+              <td class="product-selection__table__item">
+                <select name="product-selection__table__select">
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </td>
+              <td class="product-selection__table__item">
+                <select class="product-selection__table__select">
+                  <option value="1" selected>Выберите причину</option>
+                  <option value="2">Первая причина</option>
+                  <option value="3">это ложь</option>
+                  <option value="4">Кто прав кто виноват</option>
+                  <option value="5">не разберешь</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="product-selection__table__item">
+                <input type="checkbox" />
+              </td>
+              <td class="product-selection__table__item">
+                Копье для мойки высокого давления BORT BHL-TURBO (Струйная
+                трубка; Грязевая фреза)
+              </td>
+              <td class="product-selection__table__item">18 390 Р</td>
+              <td class="product-selection__table__item">
+                <select name="product-selection__table__select">
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </td>
+              <td class="product-selection__table__item">
+                <select class="product-selection__table__select">
+                  <option value="1" selected>Выберите причину</option>
+                  <option value="2">Первая причина</option>
+                  <option value="4">это ложь</option>
+                  <option value="3">Кто прав кто виноват</option>
+                  <option value="5">не разберешь</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-9">
+          <form class="product-selection__comment__wrapper">
+            <label class="product-selection__comment__name">Оставьте комментарий</label>
+            <textarea cols="30" rows="4" class="product-selection__comment__field" required></textarea>
+            <button type="submit" class="product-selection__button">
+              Вернуть
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.product-selection -->
 
   <div class="draft-overlay">
     <div class="draft-overlay__open">
@@ -294,6 +375,7 @@
       <a href="data.html" class="draft-overlay__link">Начать заново</a>
     </div>
   </div>
+  <!-- /.draft-overlay -->
 
   <div class="footer">
     <img src="image/footer.png" alt="" />

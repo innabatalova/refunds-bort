@@ -4,6 +4,9 @@
   color: #FFF
   padding: 35px 0
 
+  &__forward
+    margin: 15px 0
+
   &__title
     font-style: normal
     font-weight: 500
@@ -84,12 +87,13 @@
       line-height: 14px
       margin-left: 10px
 
-  &__print
+  &__print, &__forward
     display: flex
     justify-content: space-between
     align-items: center
 
     &__button
+      min-width: 130px
       font-style: normal
       font-weight: 500
       font-size: 14px
@@ -131,3 +135,11 @@
       color: #FFF
       border: 1px solid #FFF
       min-width: 65px
+
+@media screen and ( max-width: 520px )
+  .data-user
+
+    &__checkbox
+
+      &__label
+        margin-left: 0

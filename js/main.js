@@ -11,9 +11,10 @@ $(document).ready(function () {
     localStorage.setItem("order", JSON.stringify(order)); //сохранение номера искомого заказа
   });
 
-  function makeRequest(url) {
-    $(".refunds-search__loading").show();
-    $(".refunds-search").hide();
+  function makeRequest() {
+    $(".refunds-search").hide(); //скрыть поиск
+    $(".step-loading").show();  //показать лоадер
+
 
     Promise.all([
       $.get("https://jsonplaceholder.typicode.com/users").promise(),
@@ -37,28 +38,34 @@ $(document).ready(function () {
             const memory = JSON.parse(localStorage.getItem("order"));
 
             if (memory.number == item.id) {
-              setTimeout(function () {
-                setTimeout(function () {
+              setTimeout(() => {
+                setTimeout(() => {
+                  $(".step-refusal").hide();
                   $(".refunds-search__loading").hide();
-
+                }, 1000)
+                setTimeout(() => {
                   $(".entered-number").append(
                     $("<span>", {
                       text: "Заказ №" + memory.number + " найден!",
                     })
                   );
-
-                  $(".refunds-autorization-regphone").show();
-                }, 900);
-                $(".refunds-search__loading").show();
-                $(".refunds-autorization-refusal").hide();
-              }, 0);
+                  $(".step-regphone").show();
+                }, 900)
+              }, 0)
             } else {
-              $(".refunds-search__loading").hide();
-              $(".step-refusal").show();
+              setTimeout(() => {
+                setTimeout(() => {
+                  $(".refunds-search__loading").hide();
+                }, 1000)
+                setTimeout(() => {
+                  $(".step-refusal").show();
+                }, 900)
+              }, 0)
+
             }
           });
         })
-        .catch(function (err) {
+        .catch(function () {
           setTimeout(function () {
             $(".refunds-search__loading").hide();
             alert("Произошла ошибка, попробуйте еще раз");
@@ -67,40 +74,6 @@ $(document).ready(function () {
         });
     });
 
-    // $.get("https://jsonplaceholder.typicode.com/users", function (data) {
-    //   setTimeout(function () {
-    //     data.forEach((item) => {
-    //       const memory = JSON.parse(localStorage.getItem("order"));
-
-    //       if (memory.number == item.id) {
-    //         setTimeout(function () {
-    //           setTimeout(function () {
-    //             $(".refunds-search__loading").hide();
-
-    //             $(".entered-number").append(
-    //               $("<span>", {
-    //                 text: "Заказ №" + memory.number + " найден!",
-    //               })
-    //             );
-
-    //             $(".refunds-autorization-regphone").show();
-    //           }, 900);
-    //           $(".refunds-search__loading").show();
-    //           $(".refunds-autorization-refusal").hide();
-    //         }, 0);
-    //       } else {
-    //         $(".refunds-search__loading").hide();
-    //         $(".step-refusal").show();
-    //       }
-    //     });
-    //   }, 500);
-    // }).fail(function () {
-    //   setTimeout(function () {
-    //     $(".refunds-search__loading").hide();
-    //     alert("Произошла ошибка, попробуйте еще раз");
-    //     $(".refunds-search").show();
-    //   }, 900);
-    // });
   }
   //запуск проверки номера заказа с данными о заказе на сервере
   $(".refunds-search__form").submit(function (e) {
@@ -302,8 +275,9 @@ $(document).ready(function () {
   }
 
   //проверка установки флажка возврата в чекбоксе
-  $(".product-selection__button").click(function () {
-    if ($(".product-selection__checkbox").prop("checked")) {
+  $(".product-selection__button").click(function (e) {
+    if ($(".product-selection__checkbox").prop("checked") && (!$(".product-selection__comment__field")[0].value == '')) {
+      e.preventDefault();
       checkDraft();
     } else {
       alert("Выберите товары для возврата!");
