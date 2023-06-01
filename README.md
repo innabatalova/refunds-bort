@@ -1,6 +1,6 @@
 # Refound-Bort
 Interface on native HTML, CSS, JS.
-Верстка интерфейса адаптивная на нативном HTML, CSS, JS, JQuery. Подключен FakeAPI для создания списка друзей.
+Верстка интерфейса адаптивная на нативном HTML, CSS, JS, JQuery. Подключен FakeAPI проверки номеров.
 Посмотреть сейчас https://iridescent-biscotti-6fd50b.netlify.app
 
 # Technologies used
